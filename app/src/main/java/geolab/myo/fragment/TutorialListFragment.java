@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 
@@ -59,6 +60,7 @@ public class TutorialListFragment extends android.support.v4.app.Fragment{
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity(),"tut",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), TutorialDetailActivity.class);
 
                 MyoTutorial myoTutorial = (MyoTutorial) parent.getAdapter().getItem(position);
