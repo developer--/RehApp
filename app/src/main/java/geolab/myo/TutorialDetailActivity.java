@@ -1,9 +1,12 @@
 package geolab.myo;
 
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -12,6 +15,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +25,9 @@ import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import geolab.myo.model.MyoTutorial;
 
@@ -29,8 +35,13 @@ import geolab.myo.model.MyoTutorial;
 
 public class TutorialDetailActivity extends ActionBarActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    private TextView title;
-    private TextView descriptionView;
+    private TextView tutorialTitleTextView;
+    private TextView tutorialDescriptionTextView;
+
+    private VideoView myVideoView;
+    private int position = 0;
+    private ProgressDialog progressDialog;
+    private MediaController mediaControls;
 
     private DrawerLayout mDrawerLayout;
 
@@ -45,13 +56,80 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_tutorial_item_detail);
-
         context = this;
+
+
+
+        // get model item data
+        final MyoTutorial myoTutorial = (MyoTutorial) getIntent().getSerializableExtra("MYO");
+
+
+        //set the media controller buttons
+        if (mediaControls == null) {
+            mediaControls = new MediaController(this);
+        }
+
+        //initialize the VideoView
+        myVideoView = (VideoView) findViewById(R.id.detailTutVideoViewId);
+
+        // create a progress bar while the video file is loading
+        progressDialog = new ProgressDialog(this);
+        // set a title for the progress bar
+        progressDialog.setTitle(myoTutorial.getTitle());
+        // set a message for the progress bar
+        progressDialog.setMessage("Loading...");
+        //set the progress bar not cancelable on users' touch
+        progressDialog.setCancelable(false);
+        // show the progress bar
+        progressDialog.show();
+
+        try {
+            //set the media controller in the VideoView
+            myVideoView.setMediaController(mediaControls);
+
+            //set the uri of the video to be played
+            myVideoView.setVideoURI(Uri.parse(myoTutorial.getVideoURL()));
+
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+
+        myVideoView.requestFocus();
+        //we also set an setOnPreparedListener in order to know when the video file is ready for playback
+        myVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                // close the progress bar and play the video
+                progressDialog.dismiss();
+                //if we have a position on savedInstanceState, the video playback should start from here
+                myVideoView.seekTo(position);
+                if (position == 0) {
+                    myVideoView.start();
+                } else {
+                    //if we come from a resumed activity, video playback will be paused
+                    myVideoView.pause();
+                }
+            }
+        });
+
+
+        tutorialTitleTextView = (TextView) findViewById(R.id.detailTutTitleTextViewId);
+        tutorialDescriptionTextView = (TextView) findViewById(R.id.detailTutDescriptionTextViewId);
+
+        tutorialTitleTextView.setText(myoTutorial.getTitle());
+        tutorialDescriptionTextView.setText(myoTutorial.getDescription());
+
         //get selected item detail
-        final MyoTutorial graphiteItem = (MyoTutorial) getIntent().getSerializableExtra("MYO");
+
         fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
         fadeIn.setDuration(1200);
         fadeIn.setFillAfter(true);
+
+
+
+
+
 
         textAnimation = AnimationUtils.loadAnimation(context,R.anim.text_animation);
 
@@ -162,11 +240,17 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        //we use onSaveInstanceState in order to store the video playback position for orientation change
+        outState.putInt("Position", myVideoView.getCurrentPosition());
+        myVideoView.pause();
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        //we use onRestoreInstanceState in order to play the video playback from the stored position
+        position = savedInstanceState.getInt("Position");
+        myVideoView.seekTo(position);
     }
 
 
