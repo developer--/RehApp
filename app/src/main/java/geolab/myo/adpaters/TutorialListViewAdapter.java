@@ -19,10 +19,8 @@ import com.andexert.library.RippleView;
 
 import java.util.ArrayList;
 
-import geolab.myo.ExerciseDetailActivity;
 import geolab.myo.R;
-import geolab.myo.TutorialDetailActivity;
-import geolab.myo.fragment.TutorialListFragment;
+import geolab.myo.activities.TutorialDetailActivity;
 import geolab.myo.model.ExerciseModel;
 import geolab.myo.model.MyoTutorial;
 
@@ -89,7 +87,7 @@ public class TutorialListViewAdapter extends BaseAdapter {
                     Toast.makeText(context, "tut", Toast.LENGTH_LONG).show();
                     Intent tutorialDetail = new Intent(context, TutorialDetailActivity.class);
                     Bundle extras = new Bundle();
-                    extras.putSerializable("TutorialModel", (ExerciseModel) getItem(lastPosition));
+                    extras.putSerializable("TutorialModel", (MyoTutorial) getItem(lastPosition));
                     tutorialDetail.putExtras(extras);
                     context.startActivity(tutorialDetail);
                 }

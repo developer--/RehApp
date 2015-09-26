@@ -81,7 +81,7 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
         // set a message for the progress bar
         progressDialog.setMessage("Loading...");
         //set the progress bar not cancelable on users' touch
-        progressDialog.setCancelable(false);
+        progressDialog.setCancelable(true);
         // show the progress bar
         progressDialog.show();
 
