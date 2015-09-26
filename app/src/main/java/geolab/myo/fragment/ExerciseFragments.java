@@ -7,19 +7,28 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import geolab.myo.R;
+import geolab.myo.model.Exercises;
 
 public class ExerciseFragments extends android.support.v4.app.Fragment{
+
+    ListView exerciseListView;
+    ArrayList<Exercises> exercisesArrayList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // inflat and return the layout
         View v = inflater.inflate(R.layout.fragment_exercises, container, false);
-        // Perform any camera updates here
+
+
         return v;
     }
+
 
 
     public static ExerciseFragments newInstance(String text) {
