@@ -3,21 +3,14 @@ package geolab.myo.fragment;
 import android.annotation.TargetApi;
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.graphics.Rect;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
 import java.io.Serializable;
 
@@ -28,7 +21,7 @@ import geolab.myo.R;
 import geolab.myo.model.TutorialDummyData;
 
 
-public class ViewPagerFragment extends android.support.v4.app.Fragment{
+public class TutorialListFragment extends android.support.v4.app.Fragment{
 
 
     @Override
@@ -87,9 +80,9 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment{
         super.onDetach();
     }
 
-    public static ViewPagerFragment newInstance(String text) {
+    public static TutorialListFragment newInstance(String text) {
 
-        ViewPagerFragment f = new ViewPagerFragment();
+        TutorialListFragment f = new TutorialListFragment();
         Bundle b = new Bundle();
         b.putString("msg", text);
 

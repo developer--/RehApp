@@ -12,7 +12,7 @@ import geolab.myo.model.Exercises;
 
 public class ExerciseListAdapter extends BaseAdapter {
 
-    private ArrayList<Exercises> myoTutsArrayList;
+    private ArrayList<Exercises> exercisesArrayList;
     private Context context;
     private LayoutInflater inflater;
 
@@ -20,21 +20,22 @@ public class ExerciseListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return exercisesArrayList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return exercisesArrayList.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+
         return null;
     }
 }
