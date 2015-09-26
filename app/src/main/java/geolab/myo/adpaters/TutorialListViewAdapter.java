@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -21,6 +22,8 @@ public class TutorialListViewAdapter extends BaseAdapter {
     private Context context;
     private LayoutInflater inflater;
 
+    private ListView TutorialListView;
+    private View rootView;
 
     public TutorialListViewAdapter(Context context, ArrayList<MyoTutorial> tutorialArrayList){
         this.context = context;
