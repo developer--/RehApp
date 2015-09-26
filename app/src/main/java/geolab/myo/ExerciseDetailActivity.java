@@ -44,7 +44,7 @@ public class ExerciseDetailActivity extends ActionBarActivity implements Navigat
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_graphite_item_detail);
+        setContentView(R.layout.activity_tutorial_item_detail);
 
         context = this;
         //get selected item detail

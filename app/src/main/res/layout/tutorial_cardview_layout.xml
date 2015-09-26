@@ -22,8 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-
             <VideoView
                 android:id="@+id/peaceOfArtImg"
                 android:layout_width="fill_parent"
@@ -43,7 +41,6 @@
                 android:layout_marginLeft="15dp"
                 android:layout_below="@+id/peaceOfArtImg"
                 android:paddingBottom="20dp" />
-
 
         </RelativeLayout>
 

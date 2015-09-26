@@ -6,21 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper{
 
-    private static final String DATABASE_NAME = "DAGSS";
-    private static final int DATABASE_VERSION = 4;
+    private static final String DATABASE_NAME = "garage48";
+    private static final int DATABASE_VERSION = 1;
 
     private static final String CREATE_GRAPHITE_DB_TABLE =
             "CREATE TABLE " + TableGraphite.TABLE_NAME + "("
             + TableGraphite.id + " integer,"
-            + TableGraphite.imgTitle + " text,"
-            + TableGraphite.imgAuthor + "text,"
-            + TableGraphite.imgURL + " text,"
-            + TableGraphite.imgDescription + " text,"
-            + TableGraphite.longitude + " real,"
-            + TableGraphite.latitude + " real,"
-            + TableGraphite.uploadDateTime + " text,"
-            + TableGraphite.likes + " integer,"
-            + TableGraphite.hashtag + " text"
+            + TableGraphite.title + " text,"
+            + TableGraphite.videoPath + " text"
             + ");";
 
 

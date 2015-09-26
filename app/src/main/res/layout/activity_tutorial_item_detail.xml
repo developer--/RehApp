@@ -1,0 +1,126 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".GraphiteDetailActivity"
+    android:fitsSystemWindows="true">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GraphiteDetailActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:background="#f9f9f9"
+        android:layout_alignParentBottom="true">
+
+                    <RelativeLayout
+                        android:id="@+id/cardview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <!-- graphite image view-->
+                        <ImageView
+                            android:id="@+id/peaceOfArtImg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="290dp"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/tab_layout" />
+
+                        <!-- image title text view-->
+                        <TextView
+                            android:id="@+id/imgTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/customViewLinear"
+                            android:textSize="25sp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="@string/imgTitle"
+                            android:textColor="#800080"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp" />
+
+
+
+                        <!-- likes number-->
+                        <TextView
+                            android:id="@+id/likes_countTextView"
+                            android:text="@string/likes_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/peaceOfArtImg"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000" />
+
+
+
+                        <!-- line custom view-->
+                        <LinearLayout
+                            android:id="@+id/customViewLinear"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@drawable/abc_list_divider_mtrl_alpha"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:padding="20dp"
+                                android:background="#dddddd"
+                                android:layout_below="@+id/likes"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginTop="10dp" />
+
+                        </LinearLayout>
+
+
+
+                        <TextView
+                            android:id="@+id/little_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/little_description"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#000"
+                            android:gravity="bottom"
+                            android:typeface="serif" />
+
+                    </RelativeLayout>
+
+
+        </ScrollView>
+
+</RelativeLayout>
+
+    <include
+        layout="@layout/navigation"/>
+
+</android.support.v4.widget.DrawerLayout>
