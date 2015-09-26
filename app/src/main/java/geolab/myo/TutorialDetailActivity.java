@@ -61,7 +61,7 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
 
 
         // get model item data
-        final MyoTutorial myoTutorial = (MyoTutorial) getIntent().getSerializableExtra("MYO");
+        final MyoTutorial myoTutorial = (MyoTutorial) getIntent().getSerializableExtra("TutorialModel");
 
 
         //set the media controller buttons
