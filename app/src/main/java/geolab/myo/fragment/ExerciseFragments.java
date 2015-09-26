@@ -8,14 +8,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
+
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 import geolab.myo.R;
 import geolab.myo.model.Exercises;
-=======
+
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,7 +27,7 @@ import java.util.Date;
 import geolab.myo.R;
 import geolab.myo.adpaters.ExercisesAdapter;
 import geolab.myo.model.ExerciseModel;
->>>>>>> origin/master
+
 
 public class ExerciseFragments extends android.support.v4.app.Fragment{
 
@@ -39,8 +39,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
                              Bundle savedInstanceState) {
         // inflat and return the layout
         View v = inflater.inflate(R.layout.fragment_exercises, container, false);
-<<<<<<< HEAD
-=======
+
         // Perform any camera updates here
 
 
@@ -64,7 +63,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
 //                Toast.makeText(getActivity(), "Click", Toast.LENGTH_LONG).show();
 //            }
 //        });
->>>>>>> origin/master
+
 
 
         return v;
