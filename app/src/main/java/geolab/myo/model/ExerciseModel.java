@@ -1,11 +1,12 @@
 package geolab.myo.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Jay on 9/26/2015.
  */
-public class ExerciseModel {
+public class ExerciseModel implements Serializable {
     private Date date;
     private String title;
     private long timeLimit;

@@ -32,6 +32,9 @@
         <activity
             android:name=".ExerciseDetailActivity"
             android:label="@string/title_activity_tutorial_details" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="geolab.myo.MainActivity" />
         </activity>
     </application>
 

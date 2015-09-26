@@ -1,6 +1,8 @@
 package geolab.myo.adpaters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.andexert.library.RippleView;
 
 import java.util.ArrayList;
 
+import geolab.myo.ExerciseDetailActivity;
 import geolab.myo.R;
 import geolab.myo.model.ExerciseModel;
 import geolab.myo.model.MyoTutorial;
@@ -50,7 +53,7 @@ public class ExercisesAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         View itemView;
         ViewHolder viewHolder;
@@ -65,7 +68,7 @@ public class ExercisesAdapter extends BaseAdapter {
             itemView.startAnimation(animation);
             lastPosition = position;
 
-            CardView container = (CardView) itemView.findViewById(R.id.card_view);
+            final CardView container = (CardView) itemView.findViewById(R.id.card_view);
             TextView titleView = (TextView) itemView.findViewById(R.id.title);
             ImageView imageView = (ImageView) itemView.findViewById(R.id.image);
             RippleView rippleView = (RippleView) itemView.findViewById(R.id.card_view_ripple);
@@ -80,6 +83,11 @@ public class ExercisesAdapter extends BaseAdapter {
                 @Override
                 public void onComplete(RippleView rippleView) {
                     Toast.makeText(context, "Click", Toast.LENGTH_LONG).show();
+                    Intent exerciseDetail = new Intent(context, ExerciseDetailActivity.class);
+                    Bundle extras = new Bundle();
+                    extras.putSerializable("Model", (ExerciseModel) getItem(position));
+                    exerciseDetail.putExtras(extras);
+                    context.startActivity(exerciseDetail);
                 }
             });
 

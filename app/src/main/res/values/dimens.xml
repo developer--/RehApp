@@ -3,4 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="color_dialog_size">48dp</dimen>
+
+
+    <dimen name="activity_exercise_detail_calendar_margin">20dp</dimen>
 </resources>
