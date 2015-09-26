@@ -19,25 +19,25 @@ import geolab.myo.model.MyoTutorial;
 
 
 public class ListViewAdapter extends BaseAdapter {
-    private ArrayList<MyoTutorial> graphiteItems;
+    private ArrayList<MyoTutorial> myoTutsArrayList;
     private Context context;
     private LayoutInflater inflater;
 
 
     public ListViewAdapter(Context context, ArrayList<MyoTutorial> tutorialArrayList){
         this.context = context;
-        this.graphiteItems = tutorialArrayList;
+        this.myoTutsArrayList = tutorialArrayList;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return graphiteItems.size();
+        return myoTutsArrayList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return graphiteItems.get(i);
+        return myoTutsArrayList.get(i);
     }
 
     @Override
@@ -83,18 +83,18 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) itemView.getTag();
         }
 
-        MyoTutorial graphiteItem = (MyoTutorial) getItem(index);
+        MyoTutorial myoTutorial = (MyoTutorial) getItem(index);
 
-        viewHolder.imgTitleView.setText(graphiteItem.getTitle());
-        viewHolder.imgDescriptionView.setText(graphiteItem.getDescription());
+        viewHolder.imgTitleView.setText(myoTutorial.getTitle());
+        viewHolder.imgDescriptionView.setText(myoTutorial.getDescription());
 
-        String url = graphiteItem.getImgURL();
+        String url = myoTutorial.getImgURL();
 
-        Picasso.with(context)
-                .load(url)
-                .fit()
-                .centerCrop()
-                .into(viewHolder.imgView);
+//        Picasso.with(context)
+//                .load(url)
+//                .fit()
+//                .centerCrop()
+//                .into(viewHolder.imgView);
 
         return itemView;
     }

@@ -25,7 +25,7 @@ import geolab.myo.R;
 import geolab.myo.model.TutorialDummyData;
 
 
-public class ViewPagerFragment extends android.support.v4.app.Fragment implements OnScrollListener {
+public class ViewPagerFragment extends android.support.v4.app.Fragment{
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
@@ -40,7 +40,6 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment implement
     public static View rootView;
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
-    private ImageView backgroundImage;
     private int lastTopValue = 0;
     //onCreateView
     @Override
@@ -60,12 +59,6 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment implement
             }
         });
 
-
-
-        //Database instance
-
-        TutorialListView = (ListView) rootView.findViewById(R.id.myoTutorialList);
-
         TutorialListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
@@ -80,8 +73,8 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment implement
         });
 
         ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), TutorialDummyData.insertList());
-        TutorialListView = (ListView) rootView.findViewById(R.id.myoTutorialList);
         TutorialListView.setAdapter(listViewAdapter);
+
         return rootView;
     }
 
@@ -101,19 +94,5 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment implement
 
         return f;
     }
-
-    @Override
-    public void onScrollStateChanged(AbsListView absListView, int i) {
-
-    }
-
-    @Override
-    public void onScroll(AbsListView absListView, int i, int i1, int i2) {
-        Rect rect = new Rect();
-        backgroundImage.getLocalVisibleRect(rect);
-        if (lastTopValue != rect.top) {
-            lastTopValue = rect.top;
-            backgroundImage.setY((float) (rect.top / 2.0));
-        }
-    }
+    
 }

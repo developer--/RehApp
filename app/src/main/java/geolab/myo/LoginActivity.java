@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -45,6 +46,10 @@ public class LoginActivity extends AppCompatActivity {
             final EditText userName = (EditText) view.findViewById(R.id.userName);
             final EditText password = (EditText) view.findViewById(R.id.password);
 
+            //user name and password
+
+
+            //button for login
             Button loginBtn = (Button) view.findViewById(R.id.loginBtn);
 
 
@@ -52,9 +57,14 @@ public class LoginActivity extends AppCompatActivity {
             loginBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(userName.getText().toString() == "123" && password.getText().toString() == "123"){
+                    final String username = userName.getText().toString();
+                    final String pass = password.getText().toString();
+
+                    if(username != "a" || pass != "a"){
                         Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                         startActivity(intent);
+                    }else{
+                        Toast.makeText(getActivity(),"wrong information " + username + " " + pass,Toast.LENGTH_LONG).show();
                     }
                 }
             });
