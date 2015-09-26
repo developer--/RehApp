@@ -25,8 +25,11 @@ public class ExerciseListAdapter extends BaseAdapter {
     private Context context;
     private LayoutInflater inflater;
 
-    private View rootView;
-
+    public ExerciseListAdapter(ArrayList<Exercises> exercisesArrayList, Context context) {
+        this.exercisesArrayList = exercisesArrayList;
+        this.context = context;
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
 
     @Override
     public int getCount() {
@@ -42,7 +45,6 @@ public class ExerciseListAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return i;
     }
-
 
     private int lastPosition = -1;
     @Override
