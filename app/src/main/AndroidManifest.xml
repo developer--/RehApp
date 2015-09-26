@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TutorialDetailsActivity"
+            android:name=".ExerciseDetailActivity"
             android:label="@string/title_activity_tutorial_details" >
         </activity>
     </application>
