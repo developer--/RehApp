@@ -84,5 +84,6 @@
 
     <string name="title_activity_tutorial_details">TutorialDetailsActivity</string>
     <string name="title_activity_exercise_details">ExerciseDetailsActivity</string>
+    <string name="title_activity_workout">WorkoutActivity</string>
 
 </resources>

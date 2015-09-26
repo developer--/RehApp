@@ -58,6 +58,13 @@
         <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-8e62eec34a12205d1d1a40e9d86789c492807278.jar" />
     </item>
     <item
+        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\pl.droidsonroids.gif\android-gif-drawable\1.1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d6825a79ca6c134dd6f26fc15eff443b5215dbdc">
+        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-cd518bdf4b0eabef4ec43617eebb774ba3a6993e.jar" />
+    </item>
+    <item
         jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"

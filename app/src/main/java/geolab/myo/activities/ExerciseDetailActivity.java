@@ -1,5 +1,6 @@
 package geolab.myo.activities;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,12 +17,12 @@ import geolab.myo.model.ExerciseModel;
 public class ExerciseDetailActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private ExerciseModel workout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_detail);
-
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -33,7 +34,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
 
 
-        ExerciseModel workout = (ExerciseModel) getIntent().getExtras().getSerializable("Model");
+        workout = (ExerciseModel) getIntent().getExtras().getSerializable("Model");
 
 
 //        TextView date = (TextView) findViewById(R.id.calendar);
@@ -43,6 +44,11 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     public void startWorkout(View v){
         if(v.getId() == R.id.start_button){
             Toast.makeText(this, "Start CLick", Toast.LENGTH_LONG).show();
+            Intent workoutActivity = new Intent(this, WorkoutActivity.class);
+            Bundle extras = new Bundle();
+            extras.putSerializable("Model", workout);
+            workoutActivity.putExtras(extras);
+            startActivity(workoutActivity);
         }
     }
 

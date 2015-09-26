@@ -47,5 +47,6 @@ dependencies {
     compile 'com.thalmic:myosdk:0.10.0@aar'
 
     compile 'com.github.traex.rippleeffect:library:1.3'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
 
 }
