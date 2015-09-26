@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.squareup.picasso.Picasso;
 
@@ -62,13 +63,12 @@ public class ListViewAdapter extends BaseAdapter {
             itemView.startAnimation(animation);
             lastPosition = index;
 
-
-            TextView imgTitleView = (TextView) itemView.findViewById(R.id.imgTitle);
             TextView littleDescriptionView = (TextView) itemView.findViewById(R.id.little_description);
+            VideoView video = (VideoView) itemView.findViewById(R.id.videoViewID);
+
 
             viewHolder.imgDescriptionView = littleDescriptionView;
-            viewHolder.imgTitleView = imgTitleView;
-
+            viewHolder.videoView = video;
 
             itemView.setTag(viewHolder);
         }
@@ -84,8 +84,6 @@ public class ListViewAdapter extends BaseAdapter {
         }
 
         MyoTutorial myoTutorial = (MyoTutorial) getItem(index);
-
-        viewHolder.imgTitleView.setText(myoTutorial.getTitle());
         viewHolder.imgDescriptionView.setText(myoTutorial.getDescription());
 
         String url = myoTutorial.getImgURL();
@@ -101,8 +99,8 @@ public class ListViewAdapter extends BaseAdapter {
 
 
     private class ViewHolder {
-        TextView imgTitleView, imgDescriptionView, uploadDateTimeView, authorView;
-        ImageView imgView;
+        TextView  imgDescriptionView;
+        VideoView videoView;
     }
 
 

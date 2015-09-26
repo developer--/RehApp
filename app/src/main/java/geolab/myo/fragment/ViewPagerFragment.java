@@ -94,5 +94,5 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment{
 
         return f;
     }
-    
+
 }

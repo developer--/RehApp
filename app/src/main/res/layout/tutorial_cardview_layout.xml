@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <VideoView
-                android:id="@+id/peaceOfArtImg"
+                android:id="@+id/videoViewID"
                 android:layout_width="fill_parent"
                 android:layout_height="200dp"
                 android:background="@color/tab_layout"
