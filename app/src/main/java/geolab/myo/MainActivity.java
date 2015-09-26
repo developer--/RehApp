@@ -31,7 +31,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import geolab.myo.animation.DepthPageTransformer;
-import geolab.myo.fragment.ViewPagerFragment;
+import geolab.myo.fragment.TutorialListFragment;
 
 import static geolab.myo.fragment.ExerciseFragments.newInstance;
 
@@ -245,7 +245,7 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
                 case 1: return newInstance("viewPager");
 //                case 1: return TestFrag.newInstance("testFrag");
             }
-            return new ViewPagerFragment();
+            return new TutorialListFragment();
         }
 
         @Override
