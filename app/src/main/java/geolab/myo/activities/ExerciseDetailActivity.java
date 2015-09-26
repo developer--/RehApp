@@ -1,4 +1,4 @@
-package geolab.myo;
+package geolab.myo.activities;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import geolab.myo.R;
 import geolab.myo.model.ExerciseModel;
 
 public class ExerciseDetailActivity extends AppCompatActivity {

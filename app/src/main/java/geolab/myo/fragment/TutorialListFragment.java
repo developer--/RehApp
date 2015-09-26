@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 
-import geolab.myo.TutorialDetailActivity;
+import geolab.myo.activities.TutorialDetailActivity;
 import geolab.myo.adpaters.TutorialListViewAdapter;
 import geolab.myo.model.MyoTutorial;
 import geolab.myo.R;
