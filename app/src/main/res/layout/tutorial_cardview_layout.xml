@@ -3,10 +3,12 @@
     xmlns:cardview="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,6 +16,13 @@
         card_view:cardCornerRadius="3dp"
         card_view:cardElevation="6dp"
         card_view:cardUseCompatPadding="true">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/card_view_tut_ripple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_rippleDuration="140"
+            app:rv_type="rectangle">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,12 +35,22 @@
                 android:background="@color/tab_layout"
                 android:contentDescription="" />
 
+            <TextView
+                android:id="@+id/detailTutTitleTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tutorial Title"
+                android:layout_below="@+id/videoViewID"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:layout_marginLeft="15dp" />
+
 
             <TextView
                 android:id="@+id/little_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/peaceOfArtImg"
+                android:layout_below="@+id/detailTutTitleTextViewId"
                 android:layout_marginBottom="25dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
@@ -40,6 +59,8 @@
                 android:textColor="@color/black" />
 
         </RelativeLayout>
+
+        </com.andexert.library.RippleView>
 
     </android.support.v7.widget.CardView>
 

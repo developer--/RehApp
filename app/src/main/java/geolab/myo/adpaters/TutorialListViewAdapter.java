@@ -1,6 +1,9 @@
 package geolab.myo.adpaters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,11 +12,18 @@ import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
+
+import com.andexert.library.RippleView;
 
 import java.util.ArrayList;
 
+import geolab.myo.ExerciseDetailActivity;
 import geolab.myo.R;
+import geolab.myo.TutorialDetailActivity;
+import geolab.myo.fragment.TutorialListFragment;
+import geolab.myo.model.ExerciseModel;
 import geolab.myo.model.MyoTutorial;
 
 
@@ -63,12 +73,27 @@ public class TutorialListViewAdapter extends BaseAdapter {
             itemView.startAnimation(animation);
             lastPosition = index;
 
+            final CardView container = (android.support.v7.widget.CardView) itemView.findViewById(R.id.cardview);
             TextView littleDescriptionView = (TextView) itemView.findViewById(R.id.little_description);
             VideoView video = (VideoView) itemView.findViewById(R.id.videoViewID);
-
+            RippleView rippleView = (RippleView) itemView.findViewById(R.id.card_view_tut_ripple);
 
             viewHolder.imgDescriptionView = littleDescriptionView;
             viewHolder.videoView = video;
+            viewHolder.rippleView = rippleView;
+
+
+            viewHolder.rippleView.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+                @Override
+                public void onComplete(RippleView rippleView) {
+                    Toast.makeText(context, "tut", Toast.LENGTH_LONG).show();
+                    Intent tutorialDetail = new Intent(context, TutorialDetailActivity.class);
+                    Bundle extras = new Bundle();
+                    extras.putSerializable("TutorialModel", (ExerciseModel) getItem(lastPosition));
+                    tutorialDetail.putExtras(extras);
+                    context.startActivity(tutorialDetail);
+                }
+            });
 
             itemView.setTag(viewHolder);
         }
@@ -93,6 +118,7 @@ public class TutorialListViewAdapter extends BaseAdapter {
     private class ViewHolder {
         TextView  imgDescriptionView;
         VideoView videoView;
+        RippleView rippleView;
     }
 
 
