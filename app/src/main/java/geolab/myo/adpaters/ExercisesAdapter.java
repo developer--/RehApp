@@ -13,16 +13,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.andexert.library.RippleView;
 
 import java.util.ArrayList;
 
-import geolab.myo.ExerciseDetailActivity;
+import geolab.myo.activities.ExerciseDetailActivity;
 import geolab.myo.R;
 import geolab.myo.model.ExerciseModel;
-import geolab.myo.model.MyoTutorial;
 
 /**
  * Created by Jay on 9/27/2015.

@@ -3,7 +3,7 @@
  * Distributed under the Myo SDK license agreement. See LICENSE.txt for details.
  */
 
-package geolab.myo;
+package geolab.myo.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -28,6 +28,8 @@ import com.thalmic.myo.Quaternion;
 import com.thalmic.myo.Vector3;
 import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
+
+import geolab.myo.R;
 
 public class MyoDeviceActivity extends Activity {
 

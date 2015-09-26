@@ -1,4 +1,4 @@
-package geolab.myo;
+package geolab.myo.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import geolab.myo.MainActivity;
+import geolab.myo.R;
 
 public class LoginActivity extends AppCompatActivity {
 

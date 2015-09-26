@@ -21,7 +21,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:configChanges="orientation">
             <intent-filter>
@@ -31,11 +31,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ExerciseDetailActivity"
+            android:name=".activities.ExerciseDetailActivity"
             android:label="@string/title_activity_exercise_details" >
         </activity>
         <activity
-            android:name=".TutorialDetailActivity"
+            android:name=".activities.TutorialDetailActivity"
             android:label="@string/title_activity_tutorial_details" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

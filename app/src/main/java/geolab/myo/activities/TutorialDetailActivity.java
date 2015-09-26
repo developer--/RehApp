@@ -1,4 +1,4 @@
-package geolab.myo;
+package geolab.myo.activities;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
@@ -29,6 +29,8 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import geolab.myo.MainActivity;
+import geolab.myo.R;
 import geolab.myo.model.MyoTutorial;
 
 
