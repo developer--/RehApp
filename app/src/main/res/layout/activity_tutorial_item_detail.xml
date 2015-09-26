@@ -37,8 +37,8 @@
                         android:focusableInTouchMode="true">
 
                         <!-- graphite image view-->
-                        <ImageView
-                            android:id="@+id/peaceOfArtImg"
+                        <VideoView
+                            android:id="@+id/detailTutVideoViewId"
                             android:layout_width="fill_parent"
                             android:layout_height="290dp"
                             android:scaleType="fitStart"
@@ -46,36 +46,27 @@
                             android:layout_centerHorizontal="true"
                             android:background="@color/tab_layout" />
 
-                        <!-- image title text view-->
                         <TextView
-                            android:id="@+id/imgTitle"
+                            android:id="@+id/detailTutTitleTextViewId"
+                            android:layout_below="@+id/detailTutVideoViewId"
+                            android:layout_marginTop="10dp"
+                            android:textSize="20sp"
+                            android:text="tutorial title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/customViewLinear"
-                            android:textSize="25sp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:text="@string/imgTitle"
-                            android:textColor="#800080"
-                            android:textStyle="bold"
-                            android:layout_marginTop="10dp"
-                            android:paddingBottom="10dp" />
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp" />
 
-
-
-                        <!-- likes number-->
                         <TextView
-                            android:id="@+id/likes_countTextView"
-                            android:text="@string/likes_number"
+                            android:id="@+id/detailTutDescriptionTextViewId"
+                            android:layout_below="@+id/detailTutTitleTextViewId"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:text="tutorial description goes here"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/peaceOfArtImg"
-                            android:textSize="12sp"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="10dp"
-                            android:textColor="#000" />
-
-
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp" />
 
                         <!-- line custom view-->
                         <LinearLayout
@@ -98,20 +89,6 @@
 
                         </LinearLayout>
 
-
-
-                        <TextView
-                            android:id="@+id/little_description"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/little_description"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
-                            android:textColor="#000"
-                            android:gravity="bottom"
-                            android:typeface="serif" />
 
                     </RelativeLayout>
 

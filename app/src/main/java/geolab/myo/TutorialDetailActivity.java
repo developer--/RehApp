@@ -48,7 +48,7 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
 
         context = this;
         //get selected item detail
-        final MyoTutorial graphiteItem = (MyoTutorial) getIntent().getSerializableExtra("MYO");
+        final MyoTutorial myoTutorial = (MyoTutorial) getIntent().getSerializableExtra("MYO");
         fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
         fadeIn.setDuration(1200);
         fadeIn.setFillAfter(true);
