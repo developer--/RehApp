@@ -229,7 +229,6 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
         return true;
     }
 
-    public SettingsFragment palleteFrag;
     /**
      * A simple pager adapter that represents 2 ScreenSlidePageFragment objects, in
      * sequence.
@@ -269,6 +268,7 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        settingsFragment = new SettingsFragment();
         return true;
     }
 
@@ -279,8 +279,8 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
             case R.id.action_settings:
                 return true;
             case R.id.action_pallete:
-                SettingsFragment palleteFrag = new SettingsFragment();
-                palleteFrag.show(MainActivity.this.getFragmentManager(),"Pallete_fragment");
+                settingsFragment = new SettingsFragment();
+                settingsFragment.show(MainActivity.this.getFragmentManager(),"Pallete_fragment");
                 return true;
         }
 
@@ -306,9 +306,9 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
         System.gc();
     }
 
-
+    public static SettingsFragment settingsFragment;
     @SuppressLint("ValidFragment")
-    private class SettingsFragment extends DialogFragment implements View.OnClickListener {
+    public class SettingsFragment extends DialogFragment implements View.OnClickListener {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -351,31 +351,31 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
                     changeStyle(toolbar, tabLayout, activity.getWindow(), R.color.red_toolbar_color, R.color.red_tab_layout, R.color.red_status_bar_color);
                     initResColors(R.color.red_toolbar_color, R.color.red_tab_layout, R.color.red_status_bar_color);
                     SaveUserSettings(getApplicationContext(), R.color.red_toolbar_color, R.color.red_tab_layout, R.color.red_status_bar_color);
-                    palleteFrag.dismiss();
+                    settingsFragment.dismiss();
                     break;
                 case R.id.purpleStyleIamgeView:
                     changeStyle(toolbar,tabLayout, activity.getWindow(),R.color.purple_toolbar_color, R.color.purple_tab_layout, R.color.purple_status_bar_color);
                     initResColors(R.color.purple_toolbar_color, R.color.purple_tab_layout, R.color.purple_status_bar_color);
                     SaveUserSettings(getApplicationContext(), R.color.purple_toolbar_color, R.color.purple_tab_layout, R.color.purple_status_bar_color);
-                    palleteFrag.dismiss();
+                    settingsFragment.dismiss();
                     break;
                 case R.id.blueStyleImageView:
                     changeStyle(toolbar,tabLayout, activity.getWindow(),R.color.blue_toolbar_color, R.color.blue_tab_layout, R.color.blue_status_bar_color);
                     initResColors(R.color.blue_toolbar_color, R.color.blue_tab_layout, R.color.blue_status_bar_color);
                     SaveUserSettings(getApplicationContext(), R.color.blue_toolbar_color, R.color.blue_tab_layout, R.color.blue_status_bar_color);
-                    palleteFrag.dismiss();
+                    settingsFragment.dismiss();
                     break;
                 case R.id.darkStyleImageView:
                     changeStyle(toolbar,tabLayout, activity.getWindow(),R.color.dark_toolbar_color, R.color.dark_tab_layout, R.color.dark_status_bar_color);
                     initResColors(R.color.dark_toolbar_color, R.color.dark_tab_layout, R.color.dark_status_bar_color);
                     SaveUserSettings(getApplicationContext(), R.color.dark_toolbar_color, R.color.dark_tab_layout, R.color.dark_status_bar_color);
-                    palleteFrag.dismiss();
+                    settingsFragment.dismiss();
                     break;
                 case R.id.grayStyleImageView:
                     changeStyle(toolbar,tabLayout, activity.getWindow(),R.color.toolbar_color, R.color.tab_layout, R.color.status_bar_color);
                     initResColors(R.color.toolbar_color, R.color.tab_layout, R.color.status_bar_color);
                     SaveUserSettings(getApplicationContext(), R.color.toolbar_color, R.color.tab_layout, R.color.status_bar_color);
-                    palleteFrag.dismiss();
+                    settingsFragment.dismiss();
                     break;
                 default:
                     changeStyle(toolbar,tabLayout, activity.getWindow(),R.color.toolbar_color, R.color.tab_layout, R.color.status_bar_color);
