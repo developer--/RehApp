@@ -14,7 +14,7 @@ import android.widget.ListView;
 
 import java.io.Serializable;
 
-import geolab.myo.ExerciseDetailActivity;
+import geolab.myo.TutorialDetailActivity;
 import geolab.myo.adpaters.TutorialListViewAdapter;
 import geolab.myo.model.MyoTutorial;
 import geolab.myo.R;
@@ -59,7 +59,7 @@ public class TutorialListFragment extends android.support.v4.app.Fragment{
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), ExerciseDetailActivity.class);
+                Intent intent = new Intent(getActivity(), TutorialDetailActivity.class);
 
                 MyoTutorial myoTutorial = (MyoTutorial) parent.getAdapter().getItem(position);
                 intent.putExtra("MYO", (Serializable) myoTutorial);

@@ -27,7 +27,7 @@ import geolab.myo.model.MyoTutorial;
 
 
 
-public class ExerciseDetailActivity extends ActionBarActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class TutorialDetailActivity extends ActionBarActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private TextView title;
     private TextView descriptionView;
