@@ -80,6 +80,9 @@
     <string name="unlocked">unlocked</string>
     <string name="locked">locked</string>
     <string name="result">result</string>
+
+
     <string name="title_activity_tutorial_details">TutorialDetailsActivity</string>
+    <string name="title_activity_exercise_details">ExerciseDetailsActivity</string>
 
 </resources>
