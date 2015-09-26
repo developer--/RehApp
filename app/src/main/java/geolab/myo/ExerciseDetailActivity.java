@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import geolab.myo.R;
 
-public class TutorialDetailsActivity extends AppCompatActivity {
+public class ExerciseDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
