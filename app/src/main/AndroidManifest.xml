@@ -6,6 +6,9 @@
         android:icon="@drawable/myo_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <uses-permission android:name="android.permission.INTERNET"/>
+
         <activity
             android:name="geolab.myo.MainActivity"
             android:label="@string/app_name" >

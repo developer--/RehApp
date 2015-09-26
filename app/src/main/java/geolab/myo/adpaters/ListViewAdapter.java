@@ -7,11 +7,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
-
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -74,7 +71,6 @@ public class ListViewAdapter extends BaseAdapter {
         }
         else{
             itemView = convertView;
-
             //scrolling animation
             Animation animation = AnimationUtils.loadAnimation(context, (index > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
             itemView.startAnimation(animation);
@@ -84,15 +80,8 @@ public class ListViewAdapter extends BaseAdapter {
         }
 
         MyoTutorial myoTutorial = (MyoTutorial) getItem(index);
+
         viewHolder.imgDescriptionView.setText(myoTutorial.getDescription());
-
-        String url = myoTutorial.getImgURL();
-
-//        Picasso.with(context)
-//                .load(url)
-//                .fit()
-//                .centerCrop()
-//                .into(viewHolder.imgView);
 
         return itemView;
     }

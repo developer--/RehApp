@@ -68,8 +68,8 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
         activity = this;
 
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("Tutorials"));
         tabLayout.addTab(tabLayout.newTab().setText("Exercises"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tutorial"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);

@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -15,6 +16,8 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import java.io.Serializable;
 
@@ -26,6 +29,7 @@ import geolab.myo.model.TutorialDummyData;
 
 
 public class ViewPagerFragment extends android.support.v4.app.Fragment{
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
@@ -40,7 +44,6 @@ public class ViewPagerFragment extends android.support.v4.app.Fragment{
     public static View rootView;
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
-    private int lastTopValue = 0;
     //onCreateView
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
