@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="resetBtm" type="id">reset</item>
+    <item name="lock_state" type="id">lock_state</item>
+    <item name="action_scan" type="id">id</item>
+</resources>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-684f878a5acfb9a1b750aa7cfd8e43207c83b262.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-a758f9be9e2c9f3f279c0dd772a0b59b4c26bea4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.2.3\118ae1bc7f3aeeddfe564f0edfd79c11d09d17d1\httpmime-4.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="118ae1bc7f3aeeddfe564f0edfd79c11d09d17d1">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\httpmime-4.2.3-57e8d5fb65ede6bc8af855b53758eb74f954a248.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-fd333e2a0f92396c9de28182afa8eb738830d83e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-cfa22ef38a0a1a63e4bfa22489fe06026514d3c8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-bebbce2f283e32aa0c56e023a4e2720898d02c43.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-7d9f38ef09a68a328a438c3f59ca2e77f034c32f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-f35433df6a0d88ed18c33ea82f14948d325d073d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-ba295aa31f01c3b13360ca0b7d4be5e327ca74fb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.github.erd\android-volley\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="24c7ec1ecd41d65b24a76cef274fdd5f0805e98b">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-ae8faa99f443404ea65486626788d75ca9292ee7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-95a228fc81a7204b9e786751d37f449d11fac29a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-d00d50cd94ec8b4b1ed68377ef826630fa3a7769.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-8cc928faa0b323a5abc2cc8edd5590a3b74e6494.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-6826219e0bd8a739619e6d92b29e874b3a53a599.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-d915d20fa742469a3ec135133af48b5c15e3bbbc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-d365f523e3c7f4e6688bb4b729f54806cb216a6e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-43bd4b842d7eb675c42062c2bd506af146cbd43b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-b9008515259a19d323e81e3185f3fa0c73a5b23f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-edc6ebcd5ab1a74b8c8f14d052a20e378767a9c9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-4e7e1d2c4297fd146450e706714342f5eda8eff1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-77c5bf112a34bd21e7c0b0448f6c668939fd8250.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-5510c684538915ba7b20af2af013a64535d814b4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-794f87b9575df2964bd2d3d76914be947515a3a9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-65f06121028e552cb973f6fdd3528746ff1f3623.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-ea06de8dfdf8f1f70fafe2a0bd1b8e97e5c69272.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-c5c3304f504a18d0c28a95e75602e1385d400fc8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-b7bf903726c74a4fa6c6821e84176e803e915326.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.2.2\b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd\httpcore-4.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\httpcore-4.2.2-f46a6768f3bfd6ee0d13b8651b9b9f9c6c283fd1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-68462c08be907c22ef6500fc32482ce7d45cbd29.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-46521f5e49666d39fe0c71526a4ebad1c390c62e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-0152447acd6e4b77ad9839170ab3bf941161f5e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-4476946bc31f971f0ec10237a568558f2180702f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-52babaad1cc54911272662c72ac4c7b5de7e8de2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-8591e3d3b91fa19d8de8675fc16ba2e785eaf6ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-be2490c6437828e078d5be6418bc4093c09e1177.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a78bfd2ec508b123ee7c03f4006ba7996ef9a8dc">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-60f0e4f0f0a61da2154d757cc82d3a0e07db029a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="C:\Users\Development\AndroidStudioProjects\Garage48-Hackathon\app\build\intermediates\pre-dexed\debug\classes-f58ea7263c6726f1213f211c640bb67951b9e0d2.jar" />
+    </item>
+
+</items>
