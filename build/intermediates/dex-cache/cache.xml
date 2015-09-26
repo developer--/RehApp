@@ -2,88 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Jay\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-29425aa2d3d9422eac8a3109aecc413e8d9d484d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-bf7d212d1a4aca0d794623282d255541e1e27fe9.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.github.erd\android-volley\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="24c7ec1ecd41d65b24a76cef274fdd5f0805e98b">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-909e0e88e4265331f46157f6e7ad4eac08b68925.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-73033de4b8a82230ba79d2b29dbfb02741d05291.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\AppData\Local\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-58435e63c2d4d2aadecd72f83cbb4b9427cf31b5.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-f3f89c11c7b23994c035a9319a7c8fc6cbd35b71.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-6926e227039ceb4a2e4445c60b64317da29a71f6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.github.traex.rippleeffect\library\1.3\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ee17feb34ce104bc17d1a1e64346d7f779ebb066">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-8e62eec34a12205d1d1a40e9d86789c492807278.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\pl.droidsonroids.gif\android-gif-drawable\1.1.7\jars\classes.jar"
+        jar="/Users/geolabedu/garage48-myo-app/app/build/intermediates/exploded-aar/pl.droidsonroids.gif/android-gif-drawable/1.1.7/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="d6825a79ca6c134dd6f26fc15eff443b5215dbdc">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-cd518bdf4b0eabef4ec43617eebb774ba3a6993e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-b314aece71a4271439b6deb73047f664e94ad7b8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\classes-64a31ab7a0fd2ef601af1180974b8e4c0e700f30.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\Jay\Desktop\Garage48\garage48-myo-app\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-940d6568f8110d5bce37e3dbe4df73ec44c26235.jar" />
+        <dex dex="/Users/geolabedu/garage48-myo-app/app/build/intermediates/pre-dexed/debug/classes-4fbc686fcccb22215edc8d7a6b1b529a41966daf.jar" />
     </item>
 
 </items>

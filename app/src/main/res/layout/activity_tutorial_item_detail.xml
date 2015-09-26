@@ -39,12 +39,11 @@
                         <!-- graphite image view-->
                         <VideoView
                             android:id="@+id/detailTutVideoViewId"
-                            android:layout_width="wrap_content"
-                            android:layout_height="500dp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
                             android:scaleType="fitStart"
                             android:adjustViewBounds="true"
-                            android:layout_centerHorizontal="true"
-                            android:minHeight="500dp" />
+                            android:layout_centerHorizontal="true" />
 
                         <TextView
                             android:id="@+id/detailTutTitleTextViewId"
