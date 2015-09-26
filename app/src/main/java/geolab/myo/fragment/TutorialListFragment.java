@@ -15,7 +15,7 @@ import android.widget.ListView;
 import java.io.Serializable;
 
 import geolab.myo.ExerciseDetailActivity;
-import geolab.myo.adpaters.ListViewAdapter;
+import geolab.myo.adpaters.TutorialListViewAdapter;
 import geolab.myo.model.MyoTutorial;
 import geolab.myo.R;
 import geolab.myo.model.TutorialDummyData;
@@ -34,7 +34,7 @@ public class TutorialListFragment extends android.support.v4.app.Fragment{
     }
 
     private ListView TutorialListView;
-    public static View rootView;
+    private View rootView;
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     //onCreateView
@@ -68,8 +68,8 @@ public class TutorialListFragment extends android.support.v4.app.Fragment{
             }
         });
 
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), TutorialDummyData.insertList());
-        TutorialListView.setAdapter(listViewAdapter);
+        TutorialListViewAdapter tutorialListViewAdapter = new TutorialListViewAdapter(getActivity(), TutorialDummyData.insertList());
+        TutorialListView.setAdapter(tutorialListViewAdapter);
 
         return rootView;
     }

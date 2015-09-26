@@ -16,13 +16,13 @@ import geolab.myo.R;
 import geolab.myo.model.MyoTutorial;
 
 
-public class ListViewAdapter extends BaseAdapter {
+public class TutorialListViewAdapter extends BaseAdapter {
     private ArrayList<MyoTutorial> myoTutsArrayList;
     private Context context;
     private LayoutInflater inflater;
 
 
-    public ListViewAdapter(Context context, ArrayList<MyoTutorial> tutorialArrayList){
+    public TutorialListViewAdapter(Context context, ArrayList<MyoTutorial> tutorialArrayList){
         this.context = context;
         this.myoTutsArrayList = tutorialArrayList;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
