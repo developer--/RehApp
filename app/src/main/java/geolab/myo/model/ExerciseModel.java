@@ -8,9 +8,26 @@ import java.util.Date;
  */
 public class ExerciseModel implements Serializable {
     private Date date;
+    private int id, type;
     private String title;
     private long timeLimit;
     private int numberOfTries, numberOfWorkoutToDo, numberOfWorkOutDone = 0;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public String getTitle() {
         return title;
