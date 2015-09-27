@@ -10,12 +10,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="geolab.myo.fragment.WorkoutActivityFragment"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_workout_intro" />
+        android:layout_height="match_parent"/>
+
+    <!--<fragment-->
+        <!--android:id="@+id/fragment"-->
+        <!--android:name="geolab.myo.fragment.WorkoutIntroFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:layout="@layout/fragment_workout_intro" />-->
 
 </LinearLayout>
 
