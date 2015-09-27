@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,9 @@ public class WorkoutIntroFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         workout = (ExerciseModel) getArguments().getSerializable("Model");
+
+//        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+//        toolbar.setBackgroundColor(workout.getColor());
     }
 
     @Override
@@ -43,6 +47,12 @@ public class WorkoutIntroFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_workout_intro, container, false);
+
+      //  view.setBackgroundColor(workout.getColor());
+
+
+        TextView titleView = (TextView) view.findViewById(R.id.workoutTitle);
+        titleView.setText(workout.getTitle());
 
         try {
             switch(workout.getType()){
@@ -53,10 +63,10 @@ public class WorkoutIntroFragment extends Fragment {
                     gifDrawable = new GifDrawable(getResources(), R.drawable.finger_spread_gif);
                     break;
                 case 2:
-                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_in_gif);
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_out_gif);
                     break;
                 case 3:
-                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_out_gif);
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_in_gif);
                     break;
                 case 4:
                     gifDrawable = new GifDrawable(getResources(), R.drawable.double_tap_gif);

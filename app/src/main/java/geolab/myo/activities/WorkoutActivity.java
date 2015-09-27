@@ -157,7 +157,7 @@ public class WorkoutActivity extends AppCompatActivity {
         // policy, that means poses will now be delivered to the listener.
         @Override
         public void onUnlock(Myo myo, long timestamp) {
-            Toast.makeText(getApplicationContext(), "unlocked", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "unlocked", Toast.LENGTH_SHORT).show();
 //            mLockStateView.setText(R.string.unlocked);
         }
 
@@ -165,7 +165,7 @@ public class WorkoutActivity extends AppCompatActivity {
         // policy, that means poses will no longer be delivered to the listener.
         @Override
         public void onLock(Myo myo, long timestamp) {
-            Toast.makeText(getApplicationContext(), "locked", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "locked", Toast.LENGTH_SHORT).show();
 //            mLockStateView.setText(R.string.locked);
         }
 
@@ -244,22 +244,22 @@ public class WorkoutActivity extends AppCompatActivity {
                 case FIST: // check fist counts
 //                    mTextView.setText(getString(R.string.pose_fist));
 //                    fistCounter++;
-                    Toast.makeText(getApplicationContext(),"fist",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"fist",Toast.LENGTH_SHORT).show();
                     sendGesture(GestureTypes.FIST_TYPE);
                     break;
                 case WAVE_IN:
 //                    mTextView.setText(getString(R.string.pose_wavein));
-                    Toast.makeText(getApplicationContext()," left",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext()," left",Toast.LENGTH_SHORT).show();
                     sendGesture(GestureTypes.WAVE_IN_TYPE);
                     break;
                 case WAVE_OUT:
 //                    mTextView.setText(getString(R.string.pose_waveout));
-                    Toast.makeText(getApplicationContext()," right",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext()," right",Toast.LENGTH_SHORT).show();
                     sendGesture(GestureTypes.WAVE_OUT_TYPE);
                     break;
                 case FINGERS_SPREAD:
 //                    mTextView.setText(getString(R.string.pose_fingersspread));
-                    Toast.makeText(getApplicationContext(),"თითების გაშლა",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"თითების გაშლა",Toast.LENGTH_SHORT).show();
                     sendGesture(GestureTypes.FINGERS_SPREAD_TYPE);
                     break;
             }

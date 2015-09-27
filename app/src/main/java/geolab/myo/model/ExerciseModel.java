@@ -13,6 +13,15 @@ public class ExerciseModel implements Serializable {
     private long timeLimit;
     private int numberOfTries, numberOfTriesDone, numberOfWorkoutToDo, numberOfWorkOutDone = 0;
     private int imageResource;
+    private int color;
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
 
     public int getImageResource() {
         return imageResource;

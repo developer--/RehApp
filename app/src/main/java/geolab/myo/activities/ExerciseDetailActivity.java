@@ -53,8 +53,9 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         }
 
         TextView date = (TextView) findViewById(R.id.calendar);
-        String dateFormat = new SimpleDateFormat("dd MMMM yyyy").format(Calendar.getInstance().getTime());
-        date.setText(dateFormat);
+//        String dateFormat = new SimpleDateFormat("dd MMMM yyyy").format(Calendar.getInstance().getTime());
+//        date.setText(dateFormat);
+        date.setText(workout.getTitle());
 
         TextView numberOfTries = (TextView) findViewById(R.id.number_of_tries_view);
         numberOfTries.setText(workout.getNumberOfTriesDone() + "/" + workout.getNumberOfTries() + " Exercise");
@@ -74,7 +75,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
     public void startWorkout(View v){
         if(v.getId() == R.id.start_button){
-            Toast.makeText(this, "Start CLick", Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, "Start CLick", Toast.LENGTH_LONG).show();
             Intent workoutActivity = new Intent(this, WorkoutActivity.class);
             Bundle extras = new Bundle();
             extras.putSerializable("Model", workout);

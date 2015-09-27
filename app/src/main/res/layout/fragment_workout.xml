@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,52 +9,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/time_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:text="Time" />
+            android:orientation="vertical"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardElevation="10dp">
 
-        <TextView
-            android:id="@+id/timer_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/time_label"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:textSize="36sp"
-            android:text="Batman"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/number_of_reps_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="# of Exercises"/>
+                <TextView
+                    android:id="@+id/time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/black"
+                    android:text="Time" />
 
-        <TextView
-            android:id="@+id/number_of_reps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/number_of_reps_label"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="10dp"
-            android:textSize="30sp"
-            android:text="0"/>
+                <TextView
+                    android:id="@+id/timer_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="Batman"
+                    android:textColor="@android:color/black"
+                    android:textSize="38sp" />
 
-        <Button
-            android:id="@+id/cancel_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:text="Cancel"
-            android:onClick="cancelWorkout"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
 
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/gif"
+                        android:layout_width="144dp"
+                        android:layout_height="144dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="50dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/fist_gif" />
+
+                    <ImageView
+                        android:layout_width="144dp"
+                        android:layout_height="144dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="50dp"
+                        android:scaleType="fitXY"
+                        android:scaleX="1.08"
+                        android:scaleY="1.18"
+                        android:src="@drawable/pattern" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/number_of_reps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/number_of_reps_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:text="Number of Exercises" />
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:onClick="cancelWorkout"
+                    android:text="Go Back" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
 
 

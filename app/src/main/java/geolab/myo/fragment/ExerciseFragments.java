@@ -1,5 +1,6 @@
 package geolab.myo.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.format.Time;
 import android.view.LayoutInflater;
@@ -61,6 +62,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
         model1.setNumberOfWorkoutToDo(15);
         model1.setTimeLimit(180000);//180000);
         model1.setImageResource(R.drawable.mov1);
+        model1.setColor(Color.BLUE);
         exercises.add(model1);
 
         ExerciseModel model2 = new ExerciseModel(Calendar.getInstance().getTime());
@@ -70,6 +72,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
         model2.setNumberOfWorkoutToDo(15);
         model2.setTimeLimit(180000);//180000);
         model2.setImageResource(R.drawable.mov2);
+        model2.setColor(Color.RED);
         exercises.add(model2);
 
         ExerciseModel model3 = new ExerciseModel(Calendar.getInstance().getTime());
@@ -79,16 +82,28 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
         model3.setNumberOfWorkoutToDo(15);
         model3.setTimeLimit(180000);//180000);
         model3.setImageResource(R.drawable.mov3);
+        model3.setColor(Color.GREEN);
         exercises.add(model3);
 
         ExerciseModel model4 = new ExerciseModel(Calendar.getInstance().getTime());
         model4.setType(3);
-        model4.setTitle("Double Tap Exercise");
+        model4.setTitle("Wave In Exercise");
         model4.setNumberOfTries(3);
         model4.setNumberOfWorkoutToDo(15);
         model4.setTimeLimit(180000);//180000);
-        model4.setImageResource(R.drawable.mov4);
+        model4.setImageResource(R.drawable.mov3);
+        model4.setColor(Color.YELLOW);
         exercises.add(model4);
+
+        ExerciseModel model5 = new ExerciseModel(Calendar.getInstance().getTime());
+        model5.setType(4);
+        model5.setTitle("Double Tap Exercise");
+        model5.setNumberOfTries(3);
+        model5.setNumberOfWorkoutToDo(15);
+        model5.setTimeLimit(180000);//180000);
+        model5.setImageResource(R.drawable.mov4);
+        model5.setColor(Color.CYAN);
+        exercises.add(model5);
 
 
         ExercisesAdapter adapter = new ExercisesAdapter(getActivity(), exercises);
