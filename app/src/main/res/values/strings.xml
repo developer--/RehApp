@@ -34,5 +34,7 @@
     <string name="title_activity_tutorial_details">TutorialDetailsActivity</string>
     <string name="title_activity_exercise_details">ExerciseDetailsActivity</string>
     <string name="title_activity_workout">WorkoutActivity</string>
+    <string name="hello_world">ჰელლო</string>
+    <string name="fb_user_name">user</string>
 
 </resources>

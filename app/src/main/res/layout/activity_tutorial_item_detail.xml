@@ -31,19 +31,28 @@
                     <RelativeLayout
                         android:id="@+id/cardview"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:clickable="true"
                         android:focusable="true"
                         android:focusableInTouchMode="true">
 
-                        <!-- graphite image view-->
+
                         <VideoView
                             android:id="@+id/detailTutVideoViewId"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:scaleType="fitStart"
-                            android:adjustViewBounds="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="320dp"
+                            android:adjustViewBounds="false"
+                            android:minHeight="450dp"
                             android:layout_centerHorizontal="true" />
+
+                        <ImageView
+                            android:id="@+id/play_bg_id"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/video_play_btn"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="130dp" />
 
                         <TextView
                             android:id="@+id/detailTutTitleTextViewId"
@@ -68,25 +77,6 @@
                             android:layout_marginLeft="10dp" />
 
                         <!-- line custom view-->
-                        <LinearLayout
-                            android:id="@+id/customViewLinear"
-                            android:paddingLeft="50dp"
-                            android:paddingRight="50dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:divider="@drawable/abc_list_divider_mtrl_alpha"
-                            android:layout_centerHorizontal="true">
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:padding="20dp"
-                                android:background="#dddddd"
-                                android:layout_below="@+id/likes"
-                                android:layout_alignParentStart="true"
-                                android:layout_marginTop="10dp" />
-
-                        </LinearLayout>
 
 
                     </RelativeLayout>
