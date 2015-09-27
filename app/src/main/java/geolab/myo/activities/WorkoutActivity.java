@@ -1,5 +1,6 @@
 package geolab.myo.activities;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,9 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import geolab.myo.R;
+import geolab.myo.fragment.WorkoutIntroFragment;
 
 public class WorkoutActivity extends AppCompatActivity {
 
@@ -28,6 +31,14 @@ public class WorkoutActivity extends AppCompatActivity {
 
 //        ActionBar actionbar = getSupportActionBar();
 //        actionbar.setDisplayHomeAsUpEnabled(true);
+
+        FrameLayout container = (FrameLayout) findViewById(R.id.fragment_container);
+
+        WorkoutIntroFragment introfragment = new WorkoutIntroFragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_container, introfragment, "intro");
+     //   ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.commit();
 
     }
 
