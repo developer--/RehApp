@@ -36,5 +36,9 @@
     <string name="title_activity_workout">WorkoutActivity</string>
     <string name="hello_world">ჰელლო</string>
     <string name="fb_user_name">user</string>
+    <string name="pose_fist">fist</string>
+    <string name="pose_wavein">left</string>
+    <string name="pose_waveout">right</string>
+    <string name="pose_fingersspread">finger Spread</string>
 
 </resources>

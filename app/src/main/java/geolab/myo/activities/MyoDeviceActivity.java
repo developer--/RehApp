@@ -36,6 +36,7 @@ public class MyoDeviceActivity extends Activity {
     private TextView mLockStateView;
     private TextView mTextView;
     public Button resetbtn;
+    public static int fistCounter;
 
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
@@ -121,13 +122,15 @@ public class MyoDeviceActivity extends Activity {
         Pose current = Pose.UNKNOWN;
         @Override
         public void onPose(Myo myo, long timestamp, Pose pose) {
-            if( current == Pose.FINGERS_SPREAD && (pose == Pose.FIST || pose == Pose.REST)){
-                mTextView.setText(getString(R.string.result));
-//                Log.d("result", mTextView.getText().toString());
-                current = Pose.UNKNOWN;
-            }else{
-                current = pose;
-            }
+            // catches two combination
+
+//            if( current == Pose.FINGERS_SPREAD && (pose == Pose.FIST || pose == Pose.REST)){
+//                mTextView.setText(getString(R.string.result));
+////                Log.d("result", mTextView.getText().toString());
+//                current = Pose.UNKNOWN;
+//            }else{
+//                current = pose;
+//            }
 //            Log.d("garage", pose.toString());
 //            Log.d("current", current.toString());
 
@@ -138,43 +141,44 @@ public class MyoDeviceActivity extends Activity {
 //                }
 //            }
 
-//            // Handle the cases of the Pose enumeration, and change the text of the text view
-//            // based on the pose we receive.
-//            switch (pose) {
-//                case UNKNOWN:
-//                    mTextView.setText(getString(R.string.hello_world));
-//                    break;
-//                case REST:
-//                case DOUBLE_TAP:
-//                    int restTextId = R.string.hello_world;
-//                    switch (myo.getArm()) {
-//                        case LEFT:
-//                            restTextId = R.string.arm_left;
-//                            break;
-//                        case RIGHT:
-//                            restTextId = R.string.arm_right;
-//                            break;
-//                    }
-//                    mTextView.setText(getString(restTextId));
-//                    break;
-//                case FIST:
-//                    mTextView.setText(getString(R.string.pose_fist));
-//                    Toast.makeText(getApplicationContext(),"მუშტი",Toast.LENGTH_SHORT).show();
-//                    break;
-//                case WAVE_IN:
-//                    mTextView.setText(getString(R.string.pose_wavein));
-//                    Toast.makeText(getApplicationContext()," მარცხნიც",Toast.LENGTH_SHORT).show();
-//                    break;
-//                case WAVE_OUT:
-//                    mTextView.setText(getString(R.string.pose_waveout));
-//                    Toast.makeText(getApplicationContext()," მარჯვნივ",Toast.LENGTH_SHORT).show();
-//                    break;
-//                case FINGERS_SPREAD:
-//                    mTextView.setText(getString(R.string.pose_fingersspread));
-//                    Toast.makeText(getApplicationContext(),"თითების გაშლა",Toast.LENGTH_SHORT).show();
-//                    break;
-//            }
-//
+            // Handle the cases of the Pose enumeration, and change the text of the text view
+            // based on the pose we receive.
+            switch (pose) {
+                case UNKNOWN:
+                    mTextView.setText(getString(R.string.hello_world));
+                    break;
+                case REST:
+                case DOUBLE_TAP:
+                    int restTextId = R.string.hello_world;
+                    switch (myo.getArm()) {
+                        case LEFT:
+                            restTextId = R.string.arm_left;
+                            break;
+                        case RIGHT:
+                            restTextId = R.string.arm_right;
+                            break;
+                    }
+                    mTextView.setText(getString(restTextId));
+                    break;
+                case FIST: // check fist counts
+                    mTextView.setText(getString(R.string.pose_fist));
+                    fistCounter++;
+                    Toast.makeText(getApplicationContext(),"fist",Toast.LENGTH_SHORT).show();
+                    break;
+                case WAVE_IN:
+                    mTextView.setText(getString(R.string.pose_wavein));
+                    Toast.makeText(getApplicationContext()," left",Toast.LENGTH_SHORT).show();
+                    break;
+                case WAVE_OUT:
+                    mTextView.setText(getString(R.string.pose_waveout));
+                    Toast.makeText(getApplicationContext()," right",Toast.LENGTH_SHORT).show();
+                    break;
+                case FINGERS_SPREAD:
+                    mTextView.setText(getString(R.string.pose_fingersspread));
+                    Toast.makeText(getApplicationContext(),"თითების გაშლა",Toast.LENGTH_SHORT).show();
+                    break;
+            }
+
             if (pose != Pose.UNKNOWN && pose != Pose.REST) {
                 // Tell the Myo to stay unlocked until told otherwise. We do that here so you can
                 // hold the poses without the Myo becoming locked.
@@ -203,6 +207,7 @@ public class MyoDeviceActivity extends Activity {
         resetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fistCounter = 0;
                 mTextView.setText("start talking...");
             }
         });
