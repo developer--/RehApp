@@ -36,6 +36,7 @@ public class MyoDeviceActivity extends Activity {
     private TextView mLockStateView;
     private TextView mTextView;
     public Button resetbtn;
+    public TextView fistCounts;
     public static int fistCounter;
 
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
@@ -200,14 +201,18 @@ public class MyoDeviceActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_exercises);
+        setContentView(R.layout.my_device_activity);
 
+
+        fistCounts  = (TextView) findViewById(R.id.fistCountsId);
         resetbtn = (Button) findViewById(R.id.resetBtm);
+        fistCounts.setText(fistCounter+"");
 
         resetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 fistCounter = 0;
+                fistCounts.setText(fistCounter+"");
                 mTextView.setText("start talking...");
             }
         });

@@ -36,6 +36,10 @@
             android:label="@string/title_activity_exercise_details" >
         </activity>
         <activity
+            android:name=".activities.MyoDeviceActivity"
+            android:label="@string/title_activity_exercise_details" >
+        </activity>
+        <activity
             android:name=".activities.TutorialDetailActivity"
             android:label="@string/title_activity_tutorial_details" >
             <meta-data
