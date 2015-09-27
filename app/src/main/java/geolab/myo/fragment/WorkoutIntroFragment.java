@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +12,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.IOException;
+
 import geolab.myo.R;
 import geolab.myo.activities.MyoDeviceActivity;
 import geolab.myo.activities.WorkoutActivity;
+import geolab.myo.model.ExerciseModel;
 import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -22,7 +26,16 @@ import pl.droidsonroids.gif.GifImageView;
  */
 public class WorkoutIntroFragment extends Fragment {
 
+    private ExerciseModel workout;
+    private GifDrawable gifDrawable;
+
     public WorkoutIntroFragment() {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        workout = (ExerciseModel) getArguments().getSerializable("Model");
     }
 
     @Override
@@ -31,8 +44,33 @@ public class WorkoutIntroFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_workout_intro, container, false);
 
+        try {
+            switch(workout.getType()){
+                case 0:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.fist_gif);
+                    break;
+                case 1:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.finger_spread_gif);
+                    break;
+                case 2:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_in_gif);
+                    break;
+                case 3:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_out_gif);
+                    break;
+                case 4:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.double_tap_gif);
+                    break;
+                default:
+                    break;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         GifImageView gif = (GifImageView) view.findViewById(R.id.gif);
-        final GifDrawable gifDrawable = (GifDrawable) gif.getDrawable();
+        gif.setImageDrawable(gifDrawable);
+      //  final GifDrawable gifDrawable = (GifDrawable) gif.getDrawable();
 
         gif.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +84,6 @@ public class WorkoutIntroFragment extends Fragment {
         });
 
         final TextView countDownView = (TextView) view.findViewById(R.id.countDownView);
-        Button button = (Button) view.findViewById(R.id.myoActivate);
 
         new CountDownTimer(6000, 1000) {
 
@@ -56,20 +93,29 @@ public class WorkoutIntroFragment extends Fragment {
 
             public void onFinish() {
                 //countDownView.setText("done!");
-                WorkoutFragment workoutFragment = new WorkoutFragment();
-                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, workoutFragment, "workout");
-                //   ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                if(getActivity() != null) {
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 
-                ((WorkoutActivity)getActivity()).setWorkoutFragment(workoutFragment);
+                    if (fragmentManager != null) {
+                        WorkoutFragment workoutFragment = new WorkoutFragment();
+                        Bundle newBundle = new Bundle();
+                        newBundle.putSerializable("Model", workout);
+                        workoutFragment.setArguments(newBundle);
+                        FragmentTransaction ft = fragmentManager.beginTransaction();
+                        ft.setCustomAnimations(R.anim.fragment_enter_anim, R.anim.fragment_exit_anim);
+//                        ft.setCustomAnimations(
+//                                R.anim.card_flip_right_in, R.anim.card_flip_right_out,
+//                                R.anim.card_flip_left_in, R.anim.card_flip_left_out);
+                        ft.replace(R.id.fragment_container, workoutFragment, "workout");
+                        //   ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 
-                ft.commit();
+                        ((WorkoutActivity) getActivity()).setWorkoutFragment(workoutFragment);
+
+                        ft.commit();
+                    }
+                }
             }
         }.start();
-
-
-
-
 
         return view;
     }

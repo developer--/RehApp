@@ -14,6 +14,10 @@ import android.widget.Toast;
 import com.thalmic.myo.Hub;
 import com.thalmic.myo.scanner.ScanActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
+
 import geolab.myo.MainActivity;
 import geolab.myo.R;
 import geolab.myo.model.ExerciseModel;
@@ -48,8 +52,15 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             return;
         }
 
-//        TextView date = (TextView) findViewById(R.id.calendar);
-//        date.setText(workout.getDate().toString());
+        TextView date = (TextView) findViewById(R.id.calendar);
+        String dateFormat = new SimpleDateFormat("dd MMMM yyyy").format(Calendar.getInstance().getTime());
+        date.setText(dateFormat);
+
+        TextView numberOfTries = (TextView) findViewById(R.id.number_of_tries_view);
+        numberOfTries.setText(workout.getNumberOfWorkOutDone() + "/" + workout.getNumberOfWorkoutToDo() + " Exercise");
+
+        TextView timeLimit = (TextView) findViewById(R.id.time_limit_view);
+        timeLimit.setText("" + TimeUnit.MILLISECONDS.toMinutes(workout.getTimeLimit()) + " Minutes");
     }
 
     private void onScanActionSelected() {

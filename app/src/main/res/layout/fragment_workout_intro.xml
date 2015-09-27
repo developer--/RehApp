@@ -24,7 +24,7 @@
         android:layout_below="@id/workoutTitle"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:src="@drawable/test"
+        android:src="@drawable/fist_gif"
         android:background="@android:color/black" />
 
     <TextView
@@ -44,12 +44,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:text="Countdown"/>
-
-    <Button
-        android:id="@+id/myoActivate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start myo activity"/>
 
 
 </RelativeLayout>

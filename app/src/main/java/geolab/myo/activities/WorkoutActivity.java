@@ -29,6 +29,8 @@ import com.thalmic.myo.scanner.ScanActivity;
 import geolab.myo.R;
 import geolab.myo.fragment.WorkoutFragment;
 import geolab.myo.fragment.WorkoutIntroFragment;
+import geolab.myo.model.ExerciseModel;
+import geolab.myo.utils.GestureTypes;
 
 public class WorkoutActivity extends AppCompatActivity {
 
@@ -51,8 +53,14 @@ public class WorkoutActivity extends AppCompatActivity {
 
         FrameLayout container = (FrameLayout) findViewById(R.id.fragment_container);
 
+        ExerciseModel workout = (ExerciseModel) getIntent().getExtras().getSerializable("Model");
+
         WorkoutIntroFragment introfragment = new WorkoutIntroFragment();
+        Bundle newBundle = new Bundle();
+        newBundle.putSerializable("Model", workout);
+        introfragment.setArguments(newBundle);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.setCustomAnimations(R.anim.fragment_enter_anim, R.anim.fragment_exit_anim);
         ft.replace(R.id.fragment_container, introfragment, "intro");
      //   ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
@@ -230,26 +238,29 @@ public class WorkoutActivity extends AppCompatActivity {
                             restTextId = R.string.arm_right;
                             break;
                     }
+                    sendGesture(GestureTypes.DOUBLE_TAP_TYPE);
 //                    mTextView.setText(getString(restTextId));
                     break;
                 case FIST: // check fist counts
 //                    mTextView.setText(getString(R.string.pose_fist));
 //                    fistCounter++;
                     Toast.makeText(getApplicationContext(),"fist",Toast.LENGTH_SHORT).show();
-                    sendGesture(1);
+                    sendGesture(GestureTypes.FIST_TYPE);
                     break;
                 case WAVE_IN:
 //                    mTextView.setText(getString(R.string.pose_wavein));
                     Toast.makeText(getApplicationContext()," left",Toast.LENGTH_SHORT).show();
+                    sendGesture(GestureTypes.WAVE_IN_TYPE);
                     break;
                 case WAVE_OUT:
 //                    mTextView.setText(getString(R.string.pose_waveout));
                     Toast.makeText(getApplicationContext()," right",Toast.LENGTH_SHORT).show();
+                    sendGesture(GestureTypes.WAVE_OUT_TYPE);
                     break;
                 case FINGERS_SPREAD:
 //                    mTextView.setText(getString(R.string.pose_fingersspread));
                     Toast.makeText(getApplicationContext(),"თითების გაშლა",Toast.LENGTH_SHORT).show();
-                    sendGesture(2);
+                    sendGesture(GestureTypes.FINGERS_SPREAD_TYPE);
                     break;
             }
 
