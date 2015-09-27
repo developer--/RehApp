@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                     final String username = userName.getText().toString();
                     final String pass = password.getText().toString();
 
-                    if(username != "a" || pass != "a"){
+                    if(username.equals("a") && pass.equals("a")){
                         Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                         startActivity(intent);
                     }else{

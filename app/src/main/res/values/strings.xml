@@ -1,10 +1,8 @@
 <resources>
-    <string name="app_name">Myo Trenner</string>
+    <string name="app_name">RehApp</string>
 
     <string name="action_settings">პარამეტრები</string>
     <string name="title_activity_graphite_item_detail">GraphiteItemDetail</string>
-
-    <string name="google_maps_key">AIzaSyCpD0CEB4QsC7abCkz0cHQyv4NJFZCqInE</string>
 
 <!-- TODO: Remove or change this placeholder text -->
 
@@ -12,69 +10,20 @@
 
     <string name="title_activity_map">MapActivity</string>
 
-    <string name="facebook_app_id">801390733309537</string>
     <string name="open">open</string>
     <string name="close">close</string>
 
-    <string name="title_activity_maps">Map</string>
-    <string name="marker_icon">graphite_icon</string>
 
 
 
-    <string name="btnTakePicture">ფოტო</string>
-    <string name="btnRecordVideo">ვიდეო</string>
-    <string name="or">(ან)</string>
-    <string name="btnUploadToServer">ატვირთვა</string>
 
-    <string name="title_activity_upload_file"></string>
-
-    <string name="title_activity_upload">UploadActivity</string>
-    <string name="post_description">აღწერა</string>
-    <string name="doneButton">აიტვირთა !</string>
-    <string name="title_activity_facebook_login">FacebookLoginActivity</string>
-
-    <string name="list_color_dialog_title">აირჩიეთ ფერი</string>
-
-    <string-array name="list_colors" translatable="false">
-        <item>#ffffff</item>
-        <item>#ff7474</item>
-        <item>#ff80ab</item>
-        <item>#ffd740</item>
-        <item>#cfd8dc</item>
-        <item>#64b5f6</item>
-        <item>#00e676</item>
-        <item>#9933cc</item>
-    </string-array>
-
-    <!-- ShoppingList MenuItems -->
-    <string name="listColor">ფერი</string>
     <string name="action_filter">ფილტრაცია</string>
-    <string name="distance">დისტანცია (მ) - </string>
-    <string name="categoryTextView">კატეგორია</string>
-    <string name="distanceNumberTextView">0</string>
-    <string name="fb_user_name">User</string>
-    <string name="imgTitle">jemo</string>
-    <string name="author">author</string>
-    <string name="createDate">createDate</string>
     <string name="little_description">აღწერა აღწერა აღწერა აღწერა აღწერა აღწერა აღწერა აღწერა აღწერა </string>
-    <string name="likes">likes</string>
-    <string name="likes_number">37</string>
-    <string name="comments_number">16</string>
-    <string name="comments">comments</string>
-    <string name="imgLinks">imgLinks</string>
-    <string name="share_text_view_id">share</string>
-    <string name="hashTag">hashTag</string>
     <string name="action_pallete">თემის შეცვლა</string>
 
-    <!-- spinner data (it's temporary)-->
-    <string-array name="graphite_categories">
-        <item>ყველა</item>
-        <item>არტი</item>
-        <item>სტენსელი</item>
-    </string-array>
+
     <string name="title_activity_login">LoginActivity</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="arm_left">left hand</string>
     <string name="arm_right">right hand</string>
     <string name="unlocked">unlocked</string>
@@ -85,6 +34,12 @@
     <string name="title_activity_tutorial_details">TutorialDetailsActivity</string>
     <string name="title_activity_exercise_details">ExerciseDetailsActivity</string>
     <string name="title_activity_workout">WorkoutActivity</string>
+    <string name="hello_world">ჰელლო</string>
+    <string name="fb_user_name">user</string>
+    <string name="pose_fist">fist</string>
+    <string name="pose_wavein">left</string>
+    <string name="pose_waveout">right</string>
+    <string name="pose_fingersspread">finger Spread</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

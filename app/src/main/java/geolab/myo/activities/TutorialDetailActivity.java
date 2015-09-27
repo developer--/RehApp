@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -19,12 +20,14 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -37,8 +40,14 @@ import geolab.myo.model.MyoTutorial;
 
 public class TutorialDetailActivity extends ActionBarActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+
+    private boolean bVideoIsBeingTouched = false;
+    private Handler mHandler = new Handler();
+    private ImageView play_icon;
+
     private TextView tutorialTitleTextView;
     private TextView tutorialDescriptionTextView;
+
 
     private VideoView myVideoView;
     private int position = 0;
@@ -60,60 +69,23 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
         setContentView(R.layout.activity_tutorial_item_detail);
         context = this;
 
-
-
         // get model item data
         final MyoTutorial myoTutorial = (MyoTutorial) getIntent().getSerializableExtra("TutorialModel");
 
 
-        //set the media controller buttons
-        if (mediaControls == null) {
-            mediaControls = new MediaController(this);
-        }
+        play_icon = (ImageView) findViewById(R.id.play_bg_id);
+        play_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(myoTutorial.getVideoURL()));
+                intent.setDataAndType(Uri.parse(myoTutorial.getVideoURL()), "video/*");
+                startActivity(intent);
+            }
+        });
 
         //initialize the VideoView
         myVideoView = (VideoView) findViewById(R.id.detailTutVideoViewId);
 
-        // create a progress bar while the video file is loading
-        progressDialog = new ProgressDialog(this);
-        // set a title for the progress bar
-        progressDialog.setTitle(myoTutorial.getTitle());
-        // set a message for the progress bar
-        progressDialog.setMessage("Loading...");
-        //set the progress bar not cancelable on users' touch
-        progressDialog.setCancelable(true);
-        // show the progress bar
-        progressDialog.show();
-
-        try {
-            //set the media controller in the VideoView
-            myVideoView.setMediaController(mediaControls);
-
-            //set the uri of the video to be played
-            myVideoView.setVideoURI(Uri.parse(myoTutorial.getVideoURL()));
-
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-            e.printStackTrace();
-        }
-
-        myVideoView.requestFocus();
-        //we also set an setOnPreparedListener in order to know when the video file is ready for playback
-        myVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                // close the progress bar and play the video
-                progressDialog.dismiss();
-                //if we have a position on savedInstanceState, the video playback should start from here
-                myVideoView.seekTo(position);
-                if (position == 0) {
-                    myVideoView.start();
-                } else {
-                    //if we come from a resumed activity, video playback will be paused
-                    myVideoView.pause();
-                }
-            }
-        });
 
 
         tutorialTitleTextView = (TextView) findViewById(R.id.detailTutTitleTextViewId);
@@ -243,16 +215,16 @@ public class TutorialDetailActivity extends ActionBarActivity implements Navigat
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         //we use onSaveInstanceState in order to store the video playback position for orientation change
-        outState.putInt("Position", myVideoView.getCurrentPosition());
-        myVideoView.pause();
+//        outState.putInt("Position", myVideoView.getCurrentPosition());
+//        myVideoView.pause();
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         //we use onRestoreInstanceState in order to play the video playback from the stored position
-        position = savedInstanceState.getInt("Position");
-        myVideoView.seekTo(position);
+//        position = savedInstanceState.getInt("Position");
+//        myVideoView.seekTo(position);
     }
 
 
