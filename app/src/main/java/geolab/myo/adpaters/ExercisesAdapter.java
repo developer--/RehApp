@@ -18,6 +18,7 @@ import com.andexert.library.RippleView;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import geolab.myo.activities.ExerciseDetailActivity;
 import geolab.myo.R;
 import geolab.myo.model.ExerciseModel;
@@ -68,7 +69,7 @@ public class ExercisesAdapter extends BaseAdapter {
 
             final CardView container = (CardView) itemView.findViewById(R.id.card_view);
             TextView titleView = (TextView) itemView.findViewById(R.id.title);
-            ImageView imageView = (ImageView) itemView.findViewById(R.id.image);
+            CircleImageView imageView = (CircleImageView) itemView.findViewById(R.id.image);
             RippleView rippleView = (RippleView) itemView.findViewById(R.id.card_view_ripple);
 
 
@@ -111,7 +112,8 @@ public class ExercisesAdapter extends BaseAdapter {
         RippleView rippleView;
         CardView container;
         TextView workoutTitle;
-        ImageView workoutImage;
+//        ImageView workoutImage;
+        CircleImageView workoutImage;
         TextView workoutDescription;
     }
 

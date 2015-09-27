@@ -64,7 +64,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
         exercises.add(model1);
 
         ExerciseModel model2 = new ExerciseModel(Calendar.getInstance().getTime());
-        model2.setType(0);
+        model2.setType(1);
         model2.setTitle("Finger Spread Exercise");
         model2.setNumberOfTries(3);
         model2.setNumberOfWorkoutToDo(15);
@@ -73,7 +73,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
         exercises.add(model2);
 
         ExerciseModel model3 = new ExerciseModel(Calendar.getInstance().getTime());
-        model3.setType(0);
+        model3.setType(2);
         model3.setTitle("Wave Out Exercise");
         model3.setNumberOfTries(3);
         model3.setNumberOfWorkoutToDo(15);
@@ -82,7 +82,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
         exercises.add(model3);
 
         ExerciseModel model4 = new ExerciseModel(Calendar.getInstance().getTime());
-        model4.setType(0);
+        model4.setType(3);
         model4.setTitle("Double Tap Exercise");
         model4.setNumberOfTries(3);
         model4.setNumberOfWorkoutToDo(15);
