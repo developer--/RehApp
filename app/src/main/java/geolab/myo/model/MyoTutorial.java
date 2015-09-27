@@ -9,12 +9,12 @@ import java.io.Serializable;
 public class MyoTutorial implements Serializable, Parcelable {
     private String title;
     private String description;
-    private String videoURL;
+    private String imgURL;
 
     public MyoTutorial(String title, String description, String videoURL) {
         this.title = title;
         this.description = description;
-        this.videoURL = videoURL;
+        this.imgURL = videoURL;
     }
 
     public MyoTutorial(){}
@@ -22,7 +22,7 @@ public class MyoTutorial implements Serializable, Parcelable {
     public MyoTutorial(Parcel in) {
         this.title = in.readString();
         this.description = in.readString();
-        this.videoURL = in.readString();
+        this.imgURL = in.readString();
     }
 
     public String getTitle() {
@@ -41,12 +41,12 @@ public class MyoTutorial implements Serializable, Parcelable {
         this.description = description;
     }
 
-    public String getVideoURL() {
-        return videoURL;
+    public String getImgURL() {
+        return imgURL;
     }
 
-    public void setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class MyoTutorial implements Serializable, Parcelable {
         return "MyoTutorial{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", videoURL='" + videoURL + '\'' +
+                ", imgURL='" + imgURL + '\'' +
                 '}';
     }
 
@@ -67,7 +67,7 @@ public class MyoTutorial implements Serializable, Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.title);
         parcel.writeString(this.description);
-        parcel.writeString(this.videoURL);
+        parcel.writeString(this.imgURL);
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
