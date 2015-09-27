@@ -11,7 +11,7 @@ public class ExerciseModel implements Serializable {
     private int id, type;
     private String title;
     private long timeLimit;
-    private int numberOfTries, numberOfWorkoutToDo, numberOfWorkOutDone = 0;
+    private int numberOfTries, numberOfTriesDone, numberOfWorkoutToDo, numberOfWorkOutDone = 0;
 
     public int getId() {
         return id;
@@ -79,6 +79,14 @@ public class ExerciseModel implements Serializable {
 
     public void setNumberOfWorkOutDone(int numberOfWorkOutDone) {
         this.numberOfWorkOutDone = numberOfWorkOutDone;
+    }
+
+    public int getNumberOfTriesDone() {
+        return numberOfTriesDone;
+    }
+
+    public void setNumberOfTriesDone(int numberOfTriesDone) {
+        this.numberOfTriesDone = numberOfTriesDone;
     }
 
     @Override

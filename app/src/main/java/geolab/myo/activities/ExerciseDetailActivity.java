@@ -57,7 +57,10 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         date.setText(dateFormat);
 
         TextView numberOfTries = (TextView) findViewById(R.id.number_of_tries_view);
-        numberOfTries.setText(workout.getNumberOfWorkOutDone() + "/" + workout.getNumberOfWorkoutToDo() + " Exercise");
+        numberOfTries.setText(workout.getNumberOfTriesDone() + "/" + workout.getNumberOfTries() + " Exercise");
+
+        TextView numberOfWorkoutToDoView = (TextView) findViewById(R.id.number_of_workout_done_view);
+        numberOfWorkoutToDoView.setText(workout.getNumberOfWorkoutToDo() + " Reps");
 
         TextView timeLimit = (TextView) findViewById(R.id.time_limit_view);
         timeLimit.setText("" + TimeUnit.MILLISECONDS.toMinutes(workout.getTimeLimit()) + " Minutes");
