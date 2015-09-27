@@ -12,7 +12,7 @@
         <android.support.v7.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
+            android:layout_height="500dp"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
@@ -80,7 +80,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="0"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp" />
+                    android:textSize="60sp" />
 
                 <TextView
                     android:id="@+id/number_of_reps_label"
