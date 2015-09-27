@@ -203,6 +203,7 @@ public class MyoDeviceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_device_activity);
 
+        onScanActionSelected();
 
         fistCounts  = (TextView) findViewById(R.id.fistCountsId);
         resetbtn = (Button) findViewById(R.id.resetBtm);

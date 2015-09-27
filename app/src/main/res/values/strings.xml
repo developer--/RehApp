@@ -40,5 +40,6 @@
     <string name="pose_wavein">left</string>
     <string name="pose_waveout">right</string>
     <string name="pose_fingersspread">finger Spread</string>
+    <string name="scan">scan</string>
 
 </resources>

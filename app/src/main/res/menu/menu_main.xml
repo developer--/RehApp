@@ -22,6 +22,11 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_scan"
+        app:showAsAction="ifRoom"
+        android:title="@string/scan"
+        />
     <!--<item-->
         <!--android:id="@+id/listColor"-->
         <!--android:title="@string/listColor"-->
