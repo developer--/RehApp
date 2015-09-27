@@ -72,13 +72,11 @@ public class MyoDeviceActivity extends Activity {
             mTextView.setText(R.string.hello_world);
         }
 
-        Vector3 v = new Vector3();
-
         // onUnlock() is called whenever a synced Myo has been unlocked. Under the standard locking
         // policy, that means poses will now be delivered to the listener.
         @Override
         public void onUnlock(Myo myo, long timestamp) {
-            Toast.makeText(getApplicationContext(), "unlocked", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "unlocked", Toast.LENGTH_SHORT).show();
             mLockStateView.setText(R.string.unlocked);
         }
 
@@ -86,7 +84,7 @@ public class MyoDeviceActivity extends Activity {
         // policy, that means poses will no longer be delivered to the listener.
         @Override
         public void onLock(Myo myo, long timestamp) {
-            Toast.makeText(getApplicationContext(), "locked", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "locked", Toast.LENGTH_SHORT).show();
             mLockStateView.setText(R.string.locked);
         }
 
@@ -176,7 +174,7 @@ public class MyoDeviceActivity extends Activity {
                     break;
                 case FINGERS_SPREAD:
                     mTextView.setText(getString(R.string.pose_fingersspread));
-                    Toast.makeText(getApplicationContext(),"თითების გაშლა",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"finger spread",Toast.LENGTH_SHORT).show();
                     break;
             }
 

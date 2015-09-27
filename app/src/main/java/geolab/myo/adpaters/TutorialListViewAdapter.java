@@ -16,6 +16,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.andexert.library.RippleView;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -109,6 +110,8 @@ public class TutorialListViewAdapter extends BaseAdapter {
 
         viewHolder.imgDescriptionView.setText(myoTutorial.getDescription());
 
+        Picasso.with(context)
+                .
         return itemView;
     }
 

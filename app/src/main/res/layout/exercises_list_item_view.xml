@@ -10,10 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical"
         app:cardBackgroundColor="@android:color/white"
         app:cardElevation="10dp">
@@ -25,25 +22,51 @@
             app:rv_rippleDuration="140"
             app:rv_type="rectangle">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/exercise_one" />
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:textColor="@android:color/black" />
+                    android:text="Finger Spread"
+                    android:textColor="#000"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
 
-                <ImageView
-                    android:id="@+id/image"
+                <TextView
+                    android:id="@+id/exerciseDurationTextViewId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/red_style" />
+                    android:text="02:00 minute"
+                    android:textColor="#000"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/exerciseDescriptionTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="move your bla bla bla"
+                    android:layout_below="@+id/title"
+                    android:layout_toEndOf="@+id/image"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp" />
+
+            </RelativeLayout>
 
         </com.andexert.library.RippleView>
     </android.support.v7.widget.CardView>
