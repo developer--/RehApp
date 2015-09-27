@@ -203,7 +203,7 @@ public class MyoDeviceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_device_activity);
 
-        onScanActionSelected();
+        //onScanActionSelected();
 
         fistCounts  = (TextView) findViewById(R.id.fistCountsId);
         resetbtn = (Button) findViewById(R.id.resetBtm);
@@ -223,6 +223,7 @@ public class MyoDeviceActivity extends Activity {
 
         // First, we initialize the Hub singleton with an application identifier.
         Hub hub = Hub.getInstance();
+        String k = getPackageName();
         if (!hub.init(this, getPackageName())) {
             // We can't do anything with the Myo device if the Hub can't be initialized, so exit.
             Toast.makeText(this, "Couldn't initialize Hub", Toast.LENGTH_SHORT).show();

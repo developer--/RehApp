@@ -64,13 +64,7 @@ public class WorkoutIntroFragment extends Fragment {
         }.start();
 
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MyoDeviceActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
         return view;

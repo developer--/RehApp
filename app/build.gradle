@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.0"
 
     defaultConfig {
-        applicationId "geolab.dags"
+        applicationId "com.geolab.myo"
         minSdkVersion 18
         targetSdkVersion 18
         versionCode 1
