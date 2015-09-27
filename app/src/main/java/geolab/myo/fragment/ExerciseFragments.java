@@ -50,7 +50,7 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
             model.setTitle("Exercise " + i);
             model.setNumberOfTries(3);
             model.setNumberOfWorkoutToDo(15);
-            model.setTimeLimit(20000);//180000);
+            model.setTimeLimit(180000);//180000);
             exercises.add(model);
         }
 
