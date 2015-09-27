@@ -31,6 +31,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import geolab.myo.animation.DepthPageTransformer;
+import geolab.myo.fragment.ExerciseFragments;
 import geolab.myo.fragment.TutorialListFragment;
 
 import static geolab.myo.fragment.ExerciseFragments.newInstance;
@@ -68,8 +69,8 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
         activity = this;
 
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Tutorials"));
         tabLayout.addTab(tabLayout.newTab().setText("Exercises"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tutorials"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -241,10 +242,10 @@ public class MainActivity extends ActionBarActivity implements NavigationView.On
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 1: return newInstance("viewPager");
-//                case 1: return TestFrag.newInstance("testFrag");
+                case 1: return TutorialListFragment.newInstance("tuts");
+//                 case 2: return TestFrag.newInstance("testFrag");
             }
-            return new TutorialListFragment();
+            return new ExerciseFragments();
         }
 
         @Override

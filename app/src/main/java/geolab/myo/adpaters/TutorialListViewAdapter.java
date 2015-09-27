@@ -2,6 +2,7 @@ package geolab.myo.adpaters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -10,12 +11,14 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.andexert.library.RippleView;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -73,11 +76,11 @@ public class TutorialListViewAdapter extends BaseAdapter {
 
             final CardView container = (android.support.v7.widget.CardView) itemView.findViewById(R.id.cardview);
             TextView littleDescriptionView = (TextView) itemView.findViewById(R.id.little_description);
-            VideoView video = (VideoView) itemView.findViewById(R.id.videoViewID);
+            ImageView img = (ImageView) itemView.findViewById(R.id.videoViewID);
             RippleView rippleView = (RippleView) itemView.findViewById(R.id.card_view_tut_ripple);
 
             viewHolder.imgDescriptionView = littleDescriptionView;
-            viewHolder.videoView = video;
+            viewHolder.tutorialImageView = img;
             viewHolder.rippleView = rippleView;
 
 
@@ -109,13 +112,14 @@ public class TutorialListViewAdapter extends BaseAdapter {
 
         viewHolder.imgDescriptionView.setText(myoTutorial.getDescription());
 
+        Picasso.with(context).load("https://www.myo.com/assets/sapphire/armin/intro/myo.png").into(viewHolder.tutorialImageView);
         return itemView;
     }
 
 
     private class ViewHolder {
         TextView  imgDescriptionView;
-        VideoView videoView;
+        ImageView tutorialImageView;
         RippleView rippleView;
     }
 
