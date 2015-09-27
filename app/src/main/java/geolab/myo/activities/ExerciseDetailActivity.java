@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.thalmic.myo.Hub;
+import com.thalmic.myo.scanner.ScanActivity;
+
 import geolab.myo.MainActivity;
 import geolab.myo.R;
 import geolab.myo.model.ExerciseModel;
@@ -37,9 +40,22 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         workout = (ExerciseModel) getIntent().getExtras().getSerializable("Model");
 
+        Hub hub = Hub.getInstance();
+        if (!hub.init(this, getPackageName())) {
+            // We can't do anything with the Myo device if the Hub can't be initialized, so exit.
+            Toast.makeText(this, "Couldn't initialize Hub", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
 
 //        TextView date = (TextView) findViewById(R.id.calendar);
 //        date.setText(workout.getDate().toString());
+    }
+
+    private void onScanActionSelected() {
+        // Launch the ScanActivity to scan for Myos to connect to.
+        Intent intent = new Intent(this, ScanActivity.class);
+        startActivity(intent);
     }
 
     public void startWorkout(View v){
@@ -57,7 +73,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_exercise_detail, menu);
         return true;
     }
 
@@ -71,6 +87,11 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                 return true;
             case R.id.action_pallete:
                 return true;
+        }
+
+        if (R.id.action_scan == item.getItemId()) {
+            onScanActionSelected();
+            return true;
         }
 
 

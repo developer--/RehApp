@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import geolab.myo.R;
 import geolab.myo.activities.MyoDeviceActivity;
+import geolab.myo.activities.WorkoutActivity;
 import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -57,8 +58,11 @@ public class WorkoutIntroFragment extends Fragment {
                 //countDownView.setText("done!");
                 WorkoutFragment workoutFragment = new WorkoutFragment();
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, workoutFragment, "intro");
+                ft.replace(R.id.fragment_container, workoutFragment, "workout");
                 //   ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+
+                ((WorkoutActivity)getActivity()).setWorkoutFragment(workoutFragment);
+
                 ft.commit();
             }
         }.start();

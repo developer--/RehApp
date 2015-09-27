@@ -18,6 +18,8 @@ import geolab.myo.activities.MyoDeviceActivity;
 
 public class WorkoutFragment extends Fragment {
 
+    private int reps = 0;
+
     public WorkoutFragment() {
     }
 
@@ -44,6 +46,17 @@ public class WorkoutFragment extends Fragment {
         }.start();
 
         return view;
+    }
+
+    public void updateRep(int type){
+        View parentView = getView();
+        if(parentView == null)
+            return;
+        if(type == 1){
+            reps++;
+            TextView repsView = (TextView) parentView.findViewById(R.id.number_of_reps);
+            repsView.setText("" + reps);
+        }
     }
 
 }
