@@ -5,9 +5,15 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/anim/card_flip_left_out.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/anim/card_flip_right_in.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/anim/card_flip_right_out.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/2.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/double_tap_gif.gif" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/finger_spread_gif.gif" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/fist_gif.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/hand_1.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/mov1.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/mov2.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/mov3.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/mov4.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/wave_in_gif.gif" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/wave_out_gif.gif" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/values/integers.xml" charset="windows-1252" />

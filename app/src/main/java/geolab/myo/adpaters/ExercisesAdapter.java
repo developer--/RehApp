@@ -102,6 +102,7 @@ public class ExercisesAdapter extends BaseAdapter {
         ExerciseModel workOut = (ExerciseModel) getItem(position);
 
         viewHolder.workoutTitle.setText(workOut.getTitle());
+        viewHolder.workoutImage.setImageResource(workOut.getImageResource());
 
         return itemView;
     }

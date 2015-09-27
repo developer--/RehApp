@@ -12,6 +12,15 @@ public class ExerciseModel implements Serializable {
     private String title;
     private long timeLimit;
     private int numberOfTries, numberOfTriesDone, numberOfWorkoutToDo, numberOfWorkOutDone = 0;
+    private int imageResource;
+
+    public int getImageResource() {
+        return imageResource;
+    }
+
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
+    }
 
     public int getId() {
         return id;

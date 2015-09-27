@@ -44,15 +44,52 @@ public class ExerciseFragments extends android.support.v4.app.Fragment{
 
 
         ArrayList<ExerciseModel> exercises = new ArrayList<>();
-        for(int i = 0; i < 10; i++){
-            ExerciseModel model = new ExerciseModel(Calendar.getInstance().getTime());
-            model.setType(i);
-            model.setTitle("Exercise " + i);
-            model.setNumberOfTries(3);
-            model.setNumberOfWorkoutToDo(15);
-            model.setTimeLimit(180000);//180000);
-            exercises.add(model);
-        }
+//        for(int i = 0; i < 10; i++){
+//            ExerciseModel model = new ExerciseModel(Calendar.getInstance().getTime());
+//            model.setType(i);
+//            model.setTitle("Exercise " + i);
+//            model.setNumberOfTries(3);
+//            model.setNumberOfWorkoutToDo(15);
+//            model.setTimeLimit(180000);//180000);
+//            exercises.add(model);
+//        }
+
+        ExerciseModel model1 = new ExerciseModel(Calendar.getInstance().getTime());
+        model1.setType(0);
+        model1.setTitle("Fist Exercise");
+        model1.setNumberOfTries(3);
+        model1.setNumberOfWorkoutToDo(15);
+        model1.setTimeLimit(180000);//180000);
+        model1.setImageResource(R.drawable.mov1);
+        exercises.add(model1);
+
+        ExerciseModel model2 = new ExerciseModel(Calendar.getInstance().getTime());
+        model2.setType(0);
+        model2.setTitle("Finger Spread Exercise");
+        model2.setNumberOfTries(3);
+        model2.setNumberOfWorkoutToDo(15);
+        model2.setTimeLimit(180000);//180000);
+        model2.setImageResource(R.drawable.mov2);
+        exercises.add(model2);
+
+        ExerciseModel model3 = new ExerciseModel(Calendar.getInstance().getTime());
+        model3.setType(0);
+        model3.setTitle("Wave Out Exercise");
+        model3.setNumberOfTries(3);
+        model3.setNumberOfWorkoutToDo(15);
+        model3.setTimeLimit(180000);//180000);
+        model3.setImageResource(R.drawable.mov3);
+        exercises.add(model3);
+
+        ExerciseModel model4 = new ExerciseModel(Calendar.getInstance().getTime());
+        model4.setType(0);
+        model4.setTitle("Double Tap Exercise");
+        model4.setNumberOfTries(3);
+        model4.setNumberOfWorkoutToDo(15);
+        model4.setTimeLimit(180000);//180000);
+        model4.setImageResource(R.drawable.mov4);
+        exercises.add(model4);
+
 
         ExercisesAdapter adapter = new ExercisesAdapter(getActivity(), exercises);
         ListView exercisesList = (ListView) v.findViewById(R.id.exercisesList);
