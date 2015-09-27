@@ -12,18 +12,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import geolab.myo.R;
 import geolab.myo.activities.MyoDeviceActivity;
 import geolab.myo.activities.WorkoutActivity;
 import geolab.myo.model.ExerciseModel;
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 
 public class WorkoutFragment extends Fragment {
 
     private ExerciseModel workout;
     private int reps = 0;
+    private GifDrawable gifDrawable;
 
     public WorkoutFragment() {
     }
@@ -72,6 +76,45 @@ public class WorkoutFragment extends Fragment {
                 }
             }
         }.start();
+
+        try {
+            switch(workout.getType()){
+                case 0:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.fist_gif);
+                    break;
+                case 1:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.finger_spread_gif);
+                    break;
+                case 2:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_out_gif);
+                    break;
+                case 3:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.wave_in_gif);
+                    break;
+                case 4:
+                    gifDrawable = new GifDrawable(getResources(), R.drawable.double_tap_gif);
+                    break;
+                default:
+                    break;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        GifImageView gif = (GifImageView) view.findViewById(R.id.gif);
+        gif.setImageDrawable(gifDrawable);
+        //  final GifDrawable gifDrawable = (GifDrawable) gif.getDrawable();
+
+        gif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (gifDrawable.isPlaying()) {
+                    gifDrawable.stop();
+                } else {
+                    gifDrawable.start();
+                }
+            }
+        });
 
         Button cancelButton = (Button) view.findViewById(R.id.cancel_button);
         cancelButton.setOnClickListener(new View.OnClickListener() {
